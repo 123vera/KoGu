@@ -10,6 +10,7 @@ class InputItem extends Component {
     const { tabIndex } = this.state
     return (
       <form className='input-wrapper'>
+ <header className="App-header">Header</header>
 
       <label htmlFor="text">
         <span>Text ：</span>

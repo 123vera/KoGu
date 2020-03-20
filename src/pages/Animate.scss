@@ -1,0 +1,72 @@
+@charset 'utf-8';
+
+#animate {
+  height: 100vh;
+  width: 100vw;
+  //background: #ddd;
+
+  span {
+    font-size: 40px;
+  }
+
+  .box {
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+    animation: mybox 1s ease;
+    animation-fill-mode: forwards; /* 动画停留在最终状态 */
+  }
+
+  @keyframes mybox {
+    0% {
+      width: 50px;
+      transform: rotate(45deg);
+      background: #ddd;
+    }
+    50% {
+      background: #ddd;
+      width: 50px;
+      transform: rotate(270deg);
+    }
+
+    70% {
+      background: #ddd;
+      width: 50px;
+    }
+
+    85% {
+      width: 100px;
+      background: #ffff0030;
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: translate(-90%);
+    }
+  }
+  @-webkit-keyframes mybox {
+    0% {
+      width: 50px;
+      transform: rotate(45deg);
+      background: #ddd;
+    }
+    50% {
+      background: #ddd;
+      width: 50px;
+      transform: rotate(270deg);
+    }
+
+    70% {
+      background: #ddd;
+      width: 50px;
+    }
+
+    85% {
+      width: 100px;
+      background: #ffff0030;
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: translate(-90%);
+    }
+  }
+}
