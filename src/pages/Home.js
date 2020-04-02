@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import JsTool from './../components/common/JsTool'
+import Count from './../components/hook/ExampleCount'
+// import JsTool from './../components/common/JsTool'
+import './Home.scss'
 
 class Home extends Component {
   render (){
     return (
-      <div>
-        <JsTool/>
+      <div className='home'>
+        {/* <JsTool/> */}
+        <h2>Hook</h2>
+        <Count/>
       </div>
     )
   }

@@ -4,7 +4,7 @@ class JsTool extends Component {
   render (){
     return (
       <div>
-        32323232
+       获取ul下面的li 用： <code>document.querySelectorAll('ul > li')</code>
       </div>
     )
   }

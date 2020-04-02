@@ -1,5 +1,9 @@
 # HTML
 
+## document.title
+
+- 当前网页的网页名称，可更改，document.title = XXX;
+
 ## 语义字符
 
 - `&hellip;` | &hellip;
