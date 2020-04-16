@@ -7,6 +7,7 @@ class Home extends Component {
   render (){
     return (
       <div className='home'>
+    
         {/* <JsTool/> */}
         <h2>Hook</h2>
         <Count/>

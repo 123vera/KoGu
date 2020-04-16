@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import './index.scss'
    // 自定义hook
    function useTitle(content) {
      const [ value, setValue ] = useState(content || '')
@@ -31,7 +31,7 @@ import React, { useState, useEffect } from 'react';
 
 
     return (
-      <div>
+      <div id="react">
         <p>{count} </p>  
         <button onClick={() => setCount(count+1)}>add</button>
         <br/>
@@ -41,6 +41,18 @@ import React, { useState, useEffect } from 'react';
         <br/>
         <button onClick={() => setValue('btn1')}>btn1{value}</button>
         <button onClick={() => setValue('btn2')}>btn2{value}</button>
+
+
+        {/* position: sticky  粘性定位 当滚动到某个位置时，设置了position:sticky的元素会悬停不动*/}
+        <div className="position-test"></div>
+        <div className="position-test"></div>
+
+        <div className="position-sticky"></div>
+
+        <div className="position-test"></div>
+        <div className="position-test"></div>
+        <div className="position-test"></div>
+
       </div>
     )
   }
