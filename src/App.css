@@ -1,9 +1,15 @@
 .App {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   text-align: center;
 }
 
+body {
+  --themeColor: #000;
+}
+.main {
+  color: var(--themeColor);
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

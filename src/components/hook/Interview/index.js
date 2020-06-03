@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import JsTool from './../components/common/JsTool'
 import './index.scss'
-import { keyToTestName } from 'jest-snapshot/build/utils';
+// import { keyToTestName } from 'jest-snapshot/build/utils';
 
 class Index extends Component {
   componentDidMount (){
