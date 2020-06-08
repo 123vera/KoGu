@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Grid.scss'
+import './grid.scss'
 
 class Index extends Component {
 render(){

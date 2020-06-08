@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import './index.scss'
+import style from './index.scss'
+
    // 自定义hook
    function useTitle(content) {
      const [ value, setValue ] = useState(content || '')
-     document.title = value
+    //  document.title = value
 
       const onChange = (e) => {
         setValue(e.target.value)
@@ -31,7 +32,7 @@ import './index.scss'
 
 
     return (
-      <div id="react">
+      <div id={style.react}>
         <p>{count} </p>  
         <button onClick={() => setCount(count+1)}>add</button>
         <br/>
@@ -52,8 +53,8 @@ import './index.scss'
         <div className="position-test"></div>
         <div className="position-test"></div>
         <div className="position-test"></div>
-
       </div>
     )
   }
+
   export default Count

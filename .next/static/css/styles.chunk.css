@@ -1,0 +1,17 @@
+#react .position-test {
+  height: 300px;
+  margin-bottom: 50px;
+  border: 1px solid #ddd;
+  background: #99c2db; }
+
+#react .position-sticky {
+  position: sticky;
+  top: 0;
+  width: 50%;
+  height: 300px;
+  background: #075a8d; }
+
+.home {
+  height: 100vh;
+  color: #000; }
+

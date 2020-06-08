@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Animate.scss'
+import './animate.scss'
 
 class Animate extends Component {
   render (){

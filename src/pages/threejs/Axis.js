@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'; // 轨道控制器
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'; // 轨道控制器
 import './Axis.scss'
 
 var renderer, width, height;

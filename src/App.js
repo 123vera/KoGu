@@ -1,16 +1,17 @@
 import React, { Component, Suspense, lazy } from 'react';
-import {  BrowserRouter as Router, Route ,Switch } from 'react-router-dom'
+import {  BrowserRouter as Router, Route ,Switch, withRouter } from 'react-router-dom'
 import InputItem from './components/common/InputItem'
 import Interview from './components/hook/Interview'
 import HtmlTag from './components/common/HtmlTag'
 // import JsTool from 'components/common/JsTool'
-import Animate from './pages/Animate'
+import Animate from './pages/animate'
 import Line from './pages/threejs/Line'
 import Axis from './pages/threejs/Axis'
 import Curve from './pages/threejs/Curve'
-import Home from './pages/Home'
-import Grid from './pages/Grid'
-import Viinet from './pages/Viinet'
+import Home from './pages/home'
+import Grid from './pages/grid'
+import Viinet from './pages/viinet'
+// import dynamic from 'next/dynamic'
 import './App.css';
 
 // // 使用 Mock
@@ -36,11 +37,19 @@ import './App.css';
 // // 输出结果
 // console.log(JSON.stringify(data, null, 4))
 
-export const HomeComponent = lazy(() => import('./pages/Home'))
-export const HtmlTagComponent = lazy(() => import('./pages/Home'))
+export const HomeComponent = lazy(() => import('./pages/home'))
+export const HtmlTagComponent = lazy(() => import('./pages/home'))
+
+// const HomeComponent = dynamic(  // 自定义加载组件 nextjs
+//   import('../components/loading'),
+//   {
+//     loading: () => <p>...</p>
+//   }
+// )
 
 class App extends Component {
   render(){
+
     document.body.style.setProperty('--themeColor', '#ff0000'); // css 变量方法
     return (
       
@@ -72,4 +81,4 @@ class App extends Component {
 }
 
 
-export default App;
+export default withRouter(App);

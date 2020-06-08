@@ -1,10 +1,23 @@
 import React, { Component } from 'react';
-import Count from './../components/hook/ExampleCount'
+import Count from '../components/hook/ExampleCount'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import axios from "axios";
+import Router from 'next/router'
 import "../mock"
 // import JsTool from './../components/common/JsTool'
-import './Home.scss'
+import './home.scss'
+
+// 如果你在beforePopState中返回 false，Router将不会执行popstate事件。
+// Router.beforePopState(({ url, as, options }) => {
+//   // I only want to allow these two routes!
+//   if (as !== "/" || as !== "/other") {
+//     // Have SSR render bad routes as a 404.
+//     window.location.href = as
+//     return false
+//   }
+
+//   return true
+// });
 
 class Home extends Component {
   componentDidMount(){
@@ -29,8 +42,12 @@ class Home extends Component {
   }
 
   render (){
+    console.log(Router.router && Router.router.pathname) 
+
     return (
       <div className='home'>
+        <h2 onClick={() => Router.push('/viinet')}>HookHookHookHookHookHook</h2>
+
        <CopyToClipboard
             style={{ cursor: 'pointer' }}
             text={'这是一段复制内容'}
@@ -39,7 +56,6 @@ class Home extends Component {
             <span>{'複製地址'}</span>
           </CopyToClipboard> 
         {/* <JsTool/> */}
-        <h2>Hook</h2>
         <Count/>
       </div>
     )
