@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Count from '../components/hook/ExampleCount'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import axios from "axios";
-import Router from 'next/router'
+import {Router} from 'react-router-dom'
+// import Router from 'next/router'
 import "../mock"
 // import JsTool from './../components/common/JsTool'
 import './home.scss'
@@ -47,6 +48,7 @@ class Home extends Component {
     return (
       <div className='home'>
         <h2 onClick={() => Router.push('/viinet')}>HookHookHookHookHookHook</h2>
+        <a href="weixin://" >打开微信l</a> 
 
        <CopyToClipboard
             style={{ cursor: 'pointer' }}

@@ -3,10 +3,10 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'; // 轨道控制器
-import './Axis.scss'
+import './axis.scss'
 
 var renderer, width, height;
-var camera,scene, light,cube;
+var camera,scene, light, cube;
 
 class Axis extends Component {
   componentDidMount () {
@@ -82,6 +82,8 @@ initObject =()=>{
   render (){
     return (
       <div className='axis'>
+
+      4444
         <div id="canvas-frame"></div>
       </div>
     )

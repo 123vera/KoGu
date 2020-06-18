@@ -5,8 +5,20 @@ import  './viinet.scss';
 class Index extends Component{
   render(){
     return(
-      <div id="home">
+      <div id="viinet">
       这个人很懒，什么也没有留下
+      <br/>
+      这个人很懒，什么也没有留下
+      <br/>
+      这个人很懒，什么也没有留下
+      <br/>
+      这个人很懒，什么也没有留下
+      <br/>
+      这个人很懒，什么也没有留下
+      <br/>
+      这个人很懒，什么也没有留下
+      <br/>
+      
       </div>
     )
   }

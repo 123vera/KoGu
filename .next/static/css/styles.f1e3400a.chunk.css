@@ -1,0 +1,17 @@
+#animate{height:100vh;width:100vw}#animate span{font-size:40px}#animate .box{width:50px;height:50px;background:#ccc;animation:mybox 1s ease;animation-fill-mode:forwards}@keyframes mybox{0%{width:50px;transform:rotate(45deg);background:#ddd}50%{background:#ddd;width:50px;transform:rotate(270deg)}70%{background:#ddd;width:50px}85%{width:100px;background:#ffff0030;transform:rotate(360deg)}100%{transform:translate(-90%)}}@-webkit-keyframes mybox{0%{width:50px;transform:rotate(45deg);background:#ddd}50%{background:#ddd;width:50px;transform:rotate(270deg)}70%{background:#ddd;width:50px}85%{width:100px;background:#ffff0030;transform:rotate(360deg)}100%{transform:translate(-90%)}}
+
+.left{background:#ccc}.test1{height:1px;background:#fff;transform:scaleY(0.5);transform-origin:0 0;-webkit-transform:scaleY(0.5);-webkit-transform-origin:0 0;overflow:hidden}
+
+#react .position-test{height:300px;margin-bottom:50px;border:1px solid #ddd;background:#99c2db}#react .position-sticky{position:sticky;top:0;width:50%;height:300px;background:#075a8d}
+
+.home{height:100vh;color:#000}
+
+.curve{background:#ddd}.curve #info{position:absolute;top:100px;left:-25%;width:100%;text-align:center;z-index:100;display:block;color:#dbd3d3;font-size:30px;letter-spacing:20px}
+
+.line{background:#ddd}.line #info{position:absolute;top:100px;left:-25%;width:100%;text-align:center;z-index:100;display:block;color:#dbd3d3;font-size:30px;letter-spacing:20px}
+
+.axis{height:100vh}.axis #canvas-frame{border:none;cursor:pointer;width:100%;height:600px;background-color:#eeeeee}
+
+#common-header header{display:flex;justify-content:space-between}
+
+

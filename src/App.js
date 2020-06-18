@@ -6,11 +6,12 @@ import HtmlTag from './components/common/HtmlTag'
 // import JsTool from 'components/common/JsTool'
 import Animate from './pages/animate'
 import Line from './pages/threejs/Line'
-import Axis from './pages/threejs/Axis'
+import Axis from './pages/threejs/axis'
 import Curve from './pages/threejs/Curve'
 import Home from './pages/home'
 import Grid from './pages/grid'
 import Viinet from './pages/viinet'
+import IndexHome from './pages/index'
 // import dynamic from 'next/dynamic'
 import './App.css';
 
@@ -49,19 +50,19 @@ export const HtmlTagComponent = lazy(() => import('./pages/home'))
 
 class App extends Component {
   render(){
-
     document.body.style.setProperty('--themeColor', '#ff0000'); // css 变量方法
     return (
       
       <div className="App">
-          <Router>
-            <Suspense fallback="正在加载中..."> {/* fallback属性也可以是组件，但是目前只支持组件加载的loading，不支持发送请求的loading */}
+            {/* fallback属性也可以是组件，但是目前只支持组件加载的loading，不支持发送请求的loading */}
+            {/* <Suspense fallback="正在加载中..."> 
                 <HomeComponent />
                 <HtmlTagComponent/>
-            </Suspense>
+            </Suspense> */}
 
             <Switch>
-                <Route path='/' exact component={Home} />
+                <Route path='/index' exact component={IndexHome} />
+                <Route path='/home' exact component={Home} />
                 <Route path='/htmlTag'  component={HtmlTag} />
                 <Route path='/inputItem' component={InputItem} />
                 <Route path='/animate' component={Animate} />
@@ -72,13 +73,11 @@ class App extends Component {
                 <Route path='/inter' component={Interview} />
                 <Route path='/viinet' component={Viinet} />
            </Switch>
-           </Router>
            {/* <Pdf/> */}
          </div>
       
        );
   }
 }
-
 
 export default withRouter(App);

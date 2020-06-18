@@ -66,7 +66,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 ### `yarn build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-=======
+# This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
 # static
->>>>>>> a313e372c4931e40eef9d331eef1264565c6fe2b
+
+> > > > > > > a313e372c4931e40eef9d331eef1264565c6fe2b
+
+"dev": "NODE_ENV=production nodemon server/index.js",
+"build": "next build",
+"start": "NODE_ENV=production node server/index.js",
