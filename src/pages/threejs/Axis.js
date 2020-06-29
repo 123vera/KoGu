@@ -82,8 +82,6 @@ initObject =()=>{
   render (){
     return (
       <div className='axis'>
-
-      4444
         <div id="canvas-frame"></div>
       </div>
     )

@@ -70,8 +70,8 @@ class Index extends Component {
             <code>
             var arr = [ [1, 2, 2], [3, 4, 5, 5], [6, 7, 8, 9, [11, 12, [12, 13, [14] ] ] ], 10];
             <br/>
-            const flatArr = arr.flat(Infinity) <br/>
-            const notRepeat = Array.from((new Set(flatArr)))<br/>
+            const flatArr = arr.flat(Infinity) --拉平（扁平）数组<br/> 
+            const notRepeat = Array.from((new Set(flatArr))) --去重<br/>
             const sortArr = notRepeat.sort((a, b) => a-b) // 升序
             </code>
           </li>

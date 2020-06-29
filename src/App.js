@@ -9,8 +9,8 @@ import Line from './pages/threejs/Line'
 import Axis from './pages/threejs/axis'
 import Curve from './pages/threejs/Curve'
 import Home from './pages/home'
-import Grid from './pages/grid'
-import Viinet from './pages/viinet'
+import ReactHook from './pages/reactHook'
+import Catalogue from './pages/catalogue'
 import IndexHome from './pages/index'
 // import dynamic from 'next/dynamic'
 import './App.css';
@@ -59,19 +59,19 @@ class App extends Component {
                 <HomeComponent />
                 <HtmlTagComponent/>
             </Suspense> */}
-
+ 
             <Switch>
+                <Route path='/' exact component={Catalogue}/>
+                <Route path='/hook' exact component={ReactHook} />
                 <Route path='/index' exact component={IndexHome} />
-                <Route path='/home' exact component={Home} />
+                <Route path='/home' component={Home} />
                 <Route path='/htmlTag'  component={HtmlTag} />
                 <Route path='/inputItem' component={InputItem} />
                 <Route path='/animate' component={Animate} />
-                <Route path='/grid' component={Grid} />
                 <Route path='/line' component={Line} />
                 <Route path='/axis' component={Axis} />
                 <Route path='/curve' component={Curve} />
                 <Route path='/inter' component={Interview} />
-                <Route path='/viinet' component={Viinet} />
            </Switch>
            {/* <Pdf/> */}
          </div>
