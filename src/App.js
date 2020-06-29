@@ -3,7 +3,6 @@ import {  BrowserRouter as Router, Route ,Switch, withRouter } from 'react-route
 import InputItem from './components/common/InputItem'
 import Interview from './components/hook/Interview'
 import HtmlTag from './components/common/HtmlTag'
-// import JsTool from 'components/common/JsTool'
 import Animate from './pages/animate'
 import Line from './pages/threejs/Line'
 import Axis from './pages/threejs/axis'

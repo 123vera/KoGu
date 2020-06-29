@@ -5,7 +5,6 @@ import axios from "axios";
 import {Router} from 'react-router-dom'
 // import Router from 'next/router'
 import "../mock"
-// import JsTool from './../components/common/JsTool'
 import './home.scss'
 import { convertToImage } from '../aseets/utils/convertToImage';
 import test1 from '../aseets/imgs/test1.jpg';
@@ -73,7 +72,6 @@ class Home extends Component {
           >
             <span>{'複製地址'}</span>
           </CopyToClipboard> 
-        {/* <JsTool/> */}
 
         <Count/>
 

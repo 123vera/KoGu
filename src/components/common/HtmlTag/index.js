@@ -19,6 +19,7 @@ class HtmlTag extends Component {
     &nbsp;<a href="#Tel">链接到本页Tel处</a> 
   </li>
 
+<li> 获取ul下面的li 用： <code>document.querySelectorAll('ul > li')</code></li>
   <li>
     <img
       src="https://cdn.cnviinet.com/static/yaoqing-201905091334.jpg"
