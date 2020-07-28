@@ -3,12 +3,18 @@ import {  BrowserRouter as Router, Route ,Switch, withRouter } from 'react-route
 import InputItem from './components/common/InputItem'
 import Interview from './components/hook/Interview'
 import HtmlTag from './components/common/HtmlTag'
+import ES  from './components/common/Es'
 import Animate from './pages/animate'
 import Line from './pages/threejs/Line'
+import InterLine from './pages/threejs/interLine'
 import Axis from './pages/threejs/axis'
 import Curve from './pages/threejs/Curve'
 import Home from './pages/home'
 import ReactHook from './pages/reactHook'
+import ReactSenior from './pages/reactJs/reactSenior.js'
+import ReactSource from './pages/reactJs/reactSource.js'
+import ReactRef from './pages/reactJs/senior/ref'
+import ReactContext from './pages/reactJs/senior/context'
 import Catalogue from './pages/catalogue'
 import IndexHome from './pages/index'
 // import dynamic from 'next/dynamic'
@@ -62,12 +68,18 @@ class App extends Component {
             <Switch>
                 <Route path='/' exact component={Catalogue}/>
                 <Route path='/hook' exact component={ReactHook} />
+                <Route path='/es11' exact component={ES} />
+                <Route path='/react-ref' exact component={ReactRef} />
+                <Route path='/react-context' exact component={ReactContext} />
+                <Route path='/react-source' exact component={ReactSource} />
+                <Route path='/react-senior' exact component={ReactSenior} />
                 <Route path='/index' exact component={IndexHome} />
                 <Route path='/home' component={Home} />
                 <Route path='/htmlTag'  component={HtmlTag} />
                 <Route path='/inputItem' component={InputItem} />
                 <Route path='/animate' component={Animate} />
                 <Route path='/line' component={Line} />
+                <Route path='/interLine' component={InterLine} />
                 <Route path='/axis' component={Axis} />
                 <Route path='/curve' component={Curve} />
                 <Route path='/inter' component={Interview} />

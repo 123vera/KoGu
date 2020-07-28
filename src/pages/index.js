@@ -12,7 +12,6 @@ const Index = () => (
   <div>
     <p onClick={() => argsFn(3,4)}>Hello next.js</p>
     <DomToImage/>
-   
     
   </div>
 )
