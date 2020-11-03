@@ -1,5 +1,3 @@
-
-
 /**
  * @description 是否在 APP ios客户端内打开，APP_IOS是约定名称
  * @return {boolean} true 为真，false 为假
@@ -26,9 +24,9 @@ export const nativeMessage = (msg) => {
     msgStr = msg;
   }
 
-//  if (isAppIOS()) {
-//     nativeIOSMessage(msgStr);
-//   }
+  //  if (isAppIOS()) {
+  //     nativeIOSMessage(msgStr);
+  //   }
 };
 
 
@@ -51,6 +49,3 @@ export const nativeGalleryPermissionRequired = () =>
 
 
 // 想要调取权限的页面 调用 nativeGalleryPermissionRequired();
-
-
-

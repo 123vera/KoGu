@@ -1,24 +1,27 @@
 import React, { Component, Suspense, lazy } from 'react';
-import {  BrowserRouter as Router, Route ,Switch, withRouter } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom'
 import InputItem from './components/common/InputItem'
 import Interview from './components/hook/Interview'
 import HtmlTag from './components/common/HtmlTag'
-import ES  from './components/common/Es'
+import ES from './components/common/Es'
 import Animate from './pages/animate'
 import Line from './pages/threejs/Line'
 import InterLine from './pages/threejs/interLine'
-import Axis from './pages/threejs/axis'
 import Curve from './pages/threejs/Curve'
 import Home from './pages/home'
 import ReactHook from './pages/reactHook'
+import Javascript from './pages/javascript/jsTest1.js'
 import ReactSenior from './pages/reactJs/reactSenior.js'
 import ReactSource from './pages/reactJs/reactSource.js'
 import ReactRef from './pages/reactJs/senior/ref'
 import ReactContext from './pages/reactJs/senior/context'
 import Catalogue from './pages/catalogue'
 import IndexHome from './pages/index'
+import Scrollreveal from './pages/scrollreveal'
+import WorldArea from './pages/worldArea'
 // import dynamic from 'next/dynamic'
 import './App.css';
+import 'antd/dist/antd.css';
 
 // // 使用 Mock
 // var Mock = require('mockjs')
@@ -54,40 +57,46 @@ export const HtmlTagComponent = lazy(() => import('./pages/home'))
 // )
 
 class App extends Component {
-  render(){
+  render() {
     document.body.style.setProperty('--themeColor', '#ff0000'); // css 变量方法
     return (
-      
+
       <div className="App">
-            {/* fallback属性也可以是组件，但是目前只支持组件加载的loading，不支持发送请求的loading */}
-            {/* <Suspense fallback="正在加载中..."> 
+        {/* fallback属性也可以是组件，但是目前只支持组件加载的loading，不支持发送请求的loading */}
+        {/* <Suspense fallback="正在加载中..."> 
                 <HomeComponent />
                 <HtmlTagComponent/>
             </Suspense> */}
- 
-            <Switch>
-                <Route path='/' exact component={Catalogue}/>
-                <Route path='/hook' exact component={ReactHook} />
-                <Route path='/es11' exact component={ES} />
-                <Route path='/react-ref' exact component={ReactRef} />
-                <Route path='/react-context' exact component={ReactContext} />
-                <Route path='/react-source' exact component={ReactSource} />
-                <Route path='/react-senior' exact component={ReactSenior} />
-                <Route path='/index' exact component={IndexHome} />
-                <Route path='/home' component={Home} />
-                <Route path='/htmlTag'  component={HtmlTag} />
-                <Route path='/inputItem' component={InputItem} />
-                <Route path='/animate' component={Animate} />
-                <Route path='/line' component={Line} />
-                <Route path='/interLine' component={InterLine} />
-                <Route path='/axis' component={Axis} />
-                <Route path='/curve' component={Curve} />
-                <Route path='/inter' component={Interview} />
-           </Switch>
-           {/* <Pdf/> */}
-         </div>
-      
-       );
+
+        <Router>
+          <Switch>
+            <Route path='/' exact component={Catalogue} />
+            <Route path='/hook' exact component={ReactHook} />
+            <Route path='/es11' exact component={ES} />
+            <Route path='/react-ref' exact component={ReactRef} />
+            <Route path='/react-context' exact component={ReactContext} />
+            <Route path='/react-source' exact component={ReactSource} />
+            <Route path='/react-senior' exact component={ReactSenior} />
+            <Route path='/index' exact component={IndexHome} />
+            <Route path='/home' component={Home} />
+            <Route path='/htmlTag' component={HtmlTag} />
+            <Route path='/inputItem' component={InputItem} />
+            <Route path='/animate' component={Animate} />
+            <Route path='/line' component={Line} />
+            <Route path='/interLine' component={InterLine} />
+            {/* <Route path='/axis' component={Axis} /> */}
+            <Route path='/curve' component={Curve} />
+            <Route path='/inter' component={Interview} />
+            <Route path='/js' component={Javascript} />
+            <Route path='/scrollreveal' component={Scrollreveal} />
+            <Route path='/worldArea' component={WorldArea} />
+          </Switch>
+        </Router>
+
+        {/* <Pdf/> */}
+      </div>
+
+    );
   }
 }
 

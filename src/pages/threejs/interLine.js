@@ -18,11 +18,17 @@ import Qipan from './../../aseets/imgs/qipan.png'
 
 class InterLine extends Component {
   componentDidMount () {
-			this.init()
+      this.init()
 	}
 	
  init= () => {
     var camera, scene, renderer, material, light
+    var requestAnimationFrame = window.requestAnimationFrame 
+    || window.mozRequestAnimationFrame
+    || window.webkitRequestAnimationFrame
+    || window.msRequestAnimationFrame;
+    window.requestAnimationFrame = requestAnimationFrame;
+
 
     renderer = new THREE.WebGLRenderer({
       canvas: document.getElementById('mainContent')
@@ -249,10 +255,11 @@ class InterLine extends Component {
 
 
      // 蓝色球
-     var sphere = new THREE.Mesh(new THREE.SphereGeometry(1, 25, 15), new THREE.MeshPhongMaterial({color: 'blue'}))
+     var sphereRadius = 1
+     var sphere = new THREE.Mesh(new THREE.SphereGeometry(sphereRadius, 25, 15), new THREE.MeshPhongMaterial({color: 'blue'}))
      sphere.position.x = -6
+     sphere.position.y = 5;
      scene.add(sphere)
-
 
 
 
@@ -278,19 +285,38 @@ class InterLine extends Component {
       singleLoad.repeat.set( 4, 4 ); // 设置两个方向上都重复4次，由于我们的图像本来是有2行2列，所以重复4次即为8行8列：
 
 
+     // 小球运动
+     let v = 0 // 蓝色球 自由落体运动的 速度
+     let a = -0.01 // 蓝色球 自由落体运动的 加速度，代表每帧小球向y方向负方向移动0.1个单位。
+     let isMoving = true // 球是否运动
 
-      
+      const sphereDraw = () => {
+        if(isMoving){
+          sphere.position.y += v
+          v += a
 
+          if(sphere.position.y <= sphereRadius) { // 碰到棋盘
+            v += -v * 0.9
+            // sphere.position.y += 0.1
+          }
 
+          if(Math.abs(v) < 0.004){ // 停止跳动
+            isMoving = false
+            sphere.position.y = 0
+          }
+    
+          requestAnimationFrame(sphereDraw)
 
+          renderer.render(scene, camera);
+        }
+      }
+      sphereDraw()
 
-      // renderer.shadowMapEnabled = true //  告诉渲染器渲染阴影 ， 3
-      renderer.render(scene, camera);
-   
   }
-
+ 
  
   render (){
+
     return (
       <div className='line1'>
         <div id="info">SUMO</div>

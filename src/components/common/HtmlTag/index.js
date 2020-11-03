@@ -3,20 +3,20 @@ import './index.scss'
 
 
 class HtmlTag extends Component {
-  render(){  
+  render(){
     return (
       <div>
  <header className="App-header">Header</header>
 
 <ul className='tag'>
   <li id='mao'> <span>abbr：</span>The <abbr title='pppppp'>PRC</abbr> was founded in 1949 </li>
-  <li> 
+  <li>
     <a href="mailto:m.bluth@example.com" hrefLang='en'>打开邮箱</a>  {/* mailto:  打开邮箱 */}
     &nbsp;<a href="tel: 123456">打电话</a>  {/* tel:  打电话 */}
     &nbsp;<a href="#top">返回顶部</a>  {/* #top 或 #:  返回页面顶部 */}
-    &nbsp;<a href="www.baidu.com" target='_blank' rel='noopener norefferrer'>外链</a> 
-    &nbsp;<a href="#email">链接到本页email处</a> 
-    &nbsp;<a href="#Tel">链接到本页Tel处</a> 
+    &nbsp;<a href="www.baidu.com" target='_blank' rel='noopener norefferrer'>外链</a>
+    &nbsp;<a href="#email">链接到本页email处</a>
+    &nbsp;<a href="#Tel">链接到本页Tel处</a>
   </li>
 
 <li> 获取ul下面的li 用： <code>document.querySelectorAll('ul > li')</code></li>
@@ -27,25 +27,25 @@ class HtmlTag extends Component {
       usemap="#example-map"
       alt="Planets" />
 
-    {/* coords 属性与 shape 属性配合使用，来规定区域的尺寸、形状和位置。图像左上角的坐标是 "0,0"。 */}        
-     {/* 
+    {/* coords 属性与 shape 属性配合使用，来规定区域的尺寸、形状和位置。图像左上角的坐标是 "0,0"。 */}
+     {/*
       圆形：shape="circle"，coords="x,y,z"
       多边形：shape="polygon"，coords="x1,y1,x2,y2,x3,y3,..."
       矩形：shape="rectangle"，coords="x1,y1,x2,y2" */}
       <map name="example-map" id="example-map">
-      <area 
+      <area
       target ="_blank"
-      shape="circle" 
-      coords="0,0,50" 
-      href="https://www.baidu.com/" 
+      shape="circle"
+      coords="0,0,50"
+      href="https://www.baidu.com/"
       alt=""
       />
 
-      <area 
+      <area
       target ="_blank"
-      shape="rectangle" 
-      coords="51,0,102,102" 
-      href="https://www.baidu.com/" 
+      shape="rectangle"
+      coords="51,0,102,102"
+      href="https://www.baidu.com/"
       alt=""
       />
     </map>
@@ -65,7 +65,7 @@ class HtmlTag extends Component {
 
     <li>
       <bdo>13232</bdo>
-      <br/> 
+      <br/>
       <bdo dir='rtl'>13232</bdo>
       <br/>
       <bdo dir='ltr'>13232</bdo>
@@ -112,12 +112,12 @@ class HtmlTag extends Component {
     </li>
     <li>
      <del>这里是要删除文字的标签</del>
-     
+
     </li>
     <li>
     <ins datetime='3232-32'>这一段文本是新插入至文档的。</ins>
     </li>
-    <li>  
+    <li>
       <details>
         <summary>挂件的title</summary>
         挂件展开的内容
@@ -146,7 +146,7 @@ class HtmlTag extends Component {
       </dialog>
     </li>
 
-    <li>  
+    <li>
       <fieldset>
         <legend>Title&hellip;</legend>
         <ul>
@@ -158,7 +158,7 @@ class HtmlTag extends Component {
       </fieldset>
     </li>
 
-    <li>  
+    <li>
       <figure>
       <img src="/media/examples/elephant-660-480.jpg"
     alt="Elephant at sunset"/>
