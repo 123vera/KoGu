@@ -2913,6 +2913,1770 @@
             "country_id": "101",
             "cname": "贾巴尔普尔",
             "area_id": ""
+        },
+        {
+            "id": "533",
+            "country_id": "211",
+            "cname": "春武里",
+            "area_id": ""
+        },
+        {
+            "id": "534",
+            "country_id": "211",
+            "cname": "呵叻",
+            "area_id": ""
+        },
+        {
+            "id": "535",
+            "country_id": "211",
+            "cname": "白蒛",
+            "area_id": ""
+        },
+        {
+            "id": "536",
+            "country_id": "211",
+            "cname": "是拉差",
+            "area_id": ""
+        },
+        {
+            "id": "537",
+            "country_id": "211",
+            "cname": "拍芭甸",
+            "area_id": ""
+        },
+        {
+            "id": "538",
+            "country_id": "211",
+            "cname": "南邦",
+            "area_id": ""
+        },
+        {
+            "id": "539",
+            "country_id": "211",
+            "cname": "坤敬",
+            "area_id": ""
+        },
+        {
+            "id": "540",
+            "country_id": "211",
+            "cname": "素叻",
+            "area_id": ""
+        },
+        {
+            "id": "541",
+            "country_id": "211",
+            "cname": "乌汶",
+            "area_id": ""
+        },
+        {
+            "id": "542",
+            "country_id": "211",
+            "cname": "信雅武里",
+            "area_id": ""
+        },
+        {
+            "id": "543",
+            "country_id": "211",
+            "cname": "空峦",
+            "area_id": ""
+        },
+        {
+            "id": "544",
+            "country_id": "211",
+            "cname": "罗勇",
+            "area_id": ""
+        },
+        {
+            "id": "545",
+            "country_id": "211",
+            "cname": "洛坤",
+            "area_id": ""
+        },
+        {
+            "id": "546",
+            "country_id": "211",
+            "cname": "佛统",
+            "area_id": ""
+        },
+        {
+            "id": "547",
+            "country_id": "211",
+            "cname": "彭世洛",
+            "area_id": ""
+        },
+        {
+            "id": "548",
+            "country_id": "211",
+            "cname": "尖竹汶",
+            "area_id": ""
+        },
+        {
+            "id": "549",
+            "country_id": "211",
+            "cname": "惹拉",
+            "area_id": ""
+        },
+        {
+            "id": "550",
+            "country_id": "211",
+            "cname": "普吉",
+            "area_id": ""
+        },
+        {
+            "id": "551",
+            "country_id": "211",
+            "cname": "叻丕",
+            "area_id": ""
+        },
+        {
+            "id": "552",
+            "country_id": "211",
+            "cname": "宋卡",
+            "area_id": ""
+        },
+        {
+            "id": "553",
+            "country_id": "211",
+            "cname": "北标",
+            "area_id": ""
+        },
+        {
+            "id": "554",
+            "country_id": "211",
+            "cname": "清莱",
+            "area_id": ""
+        },
+        {
+            "id": "555",
+            "country_id": "211",
+            "cname": "挽奎",
+            "area_id": ""
+        },
+        {
+            "id": "556",
+            "country_id": "211",
+            "cname": "阿育跎耶",
+            "area_id": ""
+        },
+        {
+            "id": "557",
+            "country_id": "211",
+            "cname": "色军",
+            "area_id": ""
+        },
+        {
+            "id": "558",
+            "country_id": "211",
+            "cname": "甲通庞",
+            "area_id": ""
+        },
+        {
+            "id": "559",
+            "country_id": "211",
+            "cname": "莎打厝",
+            "area_id": ""
+        },
+        {
+            "id": "560",
+            "country_id": "211",
+            "cname": "董里",
+            "area_id": ""
+        },
+        {
+            "id": "561",
+            "country_id": "211",
+            "cname": "北碧",
+            "area_id": ""
+        },
+        {
+            "id": "562",
+            "country_id": "211",
+            "cname": "廊开",
+            "area_id": ""
+        },
+        {
+            "id": "563",
+            "country_id": "211",
+            "cname": "兰路贾",
+            "area_id": ""
+        },
+        {
+            "id": "564",
+            "country_id": "211",
+            "cname": "甘烹碧",
+            "area_id": ""
+        },
+        {
+            "id": "565",
+            "country_id": "211",
+            "cname": "龙仔厝",
+            "area_id": ""
+        },
+        {
+            "id": "566",
+            "country_id": "211",
+            "cname": "拍浦他芭",
+            "area_id": ""
+        },
+        {
+            "id": "567",
+            "country_id": "211",
+            "cname": "程逸",
+            "area_id": ""
+        },
+        {
+            "id": "568",
+            "country_id": "211",
+            "cname": "猜也贲",
+            "area_id": ""
+        },
+        {
+            "id": "569",
+            "country_id": "211",
+            "cname": "盘蓬",
+            "area_id": ""
+        },
+        {
+            "id": "570",
+            "country_id": "211",
+            "cname": "华富里",
+            "area_id": ""
+        },
+        {
+            "id": "571",
+            "country_id": "211",
+            "cname": "春蓬",
+            "area_id": ""
+        },
+        {
+            "id": "572",
+            "country_id": "211",
+            "cname": "港生",
+            "area_id": ""
+        },
+        {
+            "id": "573",
+            "country_id": "211",
+            "cname": "加拉信",
+            "area_id": ""
+        },
+        {
+            "id": "574",
+            "country_id": "211",
+            "cname": "莎马贾",
+            "area_id": ""
+        },
+        {
+            "id": "575",
+            "country_id": "211",
+            "cname": "素攀",
+            "area_id": ""
+        },
+        {
+            "id": "576",
+            "country_id": "211",
+            "cname": "华欣",
+            "area_id": ""
+        },
+        {
+            "id": "577",
+            "country_id": "211",
+            "cname": "碧差汶",
+            "area_id": ""
+        },
+        {
+            "id": "578",
+            "country_id": "211",
+            "cname": "吗哈沙拉堪",
+            "area_id": ""
+        },
+        {
+            "id": "579",
+            "country_id": "211",
+            "cname": "洽安",
+            "area_id": ""
+        },
+        {
+            "id": "580",
+            "country_id": "211",
+            "cname": "北大年",
+            "area_id": ""
+        },
+        {
+            "id": "581",
+            "country_id": "211",
+            "cname": "北柳",
+            "area_id": ""
+        },
+        {
+            "id": "582",
+            "country_id": "211",
+            "cname": "盼武里",
+            "area_id": ""
+        },
+        {
+            "id": "583",
+            "country_id": "211",
+            "cname": "陶公",
+            "area_id": ""
+        },
+        {
+            "id": "584",
+            "country_id": "211",
+            "cname": "白昌",
+            "area_id": ""
+        },
+        {
+            "id": "585",
+            "country_id": "211",
+            "cname": "佛丕",
+            "area_id": ""
+        },
+        {
+            "id": "586",
+            "country_id": "211",
+            "cname": "素辇",
+            "area_id": ""
+        },
+        {
+            "id": "587",
+            "country_id": "211",
+            "cname": "沙岛",
+            "area_id": ""
+        },
+        {
+            "id": "588",
+            "country_id": "211",
+            "cname": "春丕",
+            "area_id": ""
+        },
+        {
+            "id": "589",
+            "country_id": "211",
+            "cname": "湄梭",
+            "area_id": ""
+        },
+        {
+            "id": "590",
+            "country_id": "211",
+            "cname": "四色菊",
+            "area_id": ""
+        },
+        {
+            "id": "591",
+            "country_id": "211",
+            "cname": "华林汕叻",
+            "area_id": ""
+        },
+        {
+            "id": "592",
+            "country_id": "211",
+            "cname": "挽磨统",
+            "area_id": ""
+        },
+        {
+            "id": "593",
+            "country_id": "211",
+            "cname": "素艾郭洛",
+            "area_id": ""
+        },
+        {
+            "id": "594",
+            "country_id": "211",
+            "cname": "莎扬",
+            "area_id": ""
+        },
+        {
+            "id": "595",
+            "country_id": "211",
+            "cname": "博他仑",
+            "area_id": ""
+        },
+        {
+            "id": "596",
+            "country_id": "211",
+            "cname": "浓洁",
+            "area_id": ""
+        },
+        {
+            "id": "597",
+            "country_id": "211",
+            "cname": "莫拉限",
+            "area_id": ""
+        },
+        {
+            "id": "598",
+            "country_id": "211",
+            "cname": "达笠",
+            "area_id": ""
+        },
+        {
+            "id": "599",
+            "country_id": "211",
+            "cname": "盘抛",
+            "area_id": ""
+        },
+        {
+            "id": "600",
+            "country_id": "211",
+            "cname": "苏美岛",
+            "area_id": ""
+        },
+        {
+            "id": "601",
+            "country_id": "211",
+            "cname": "素可泰",
+            "area_id": ""
+        },
+        {
+            "id": "602",
+            "country_id": "211",
+            "cname": "南奔",
+            "area_id": ""
+        },
+        {
+            "id": "603",
+            "country_id": "211",
+            "cname": "卫尖武里",
+            "area_id": ""
+        },
+        {
+            "id": "604",
+            "country_id": "211",
+            "cname": "湄善",
+            "area_id": ""
+        },
+        {
+            "id": "605",
+            "country_id": "211",
+            "cname": "横逸",
+            "area_id": ""
+        },
+        {
+            "id": "606",
+            "country_id": "101",
+            "cname": "加尔各答*",
+            "area_id": ""
+        },
+        {
+            "id": "607",
+            "country_id": "101",
+            "cname": "加兹阿巴德",
+            "area_id": ""
+        },
+        {
+            "id": "608",
+            "country_id": "101",
+            "cname": "金奈",
+            "area_id": ""
+        },
+        {
+            "id": "609",
+            "country_id": "101",
+            "cname": "卡瓦拉蒂",
+            "area_id": ""
+        },
+        {
+            "id": "610",
+            "country_id": "101",
+            "cname": "卡延",
+            "area_id": ""
+        },
+        {
+            "id": "611",
+            "country_id": "101",
+            "cname": "坎普尔",
+            "area_id": ""
+        },
+        {
+            "id": "612",
+            "country_id": "101",
+            "cname": "科钦",
+            "area_id": ""
+        },
+        {
+            "id": "613",
+            "country_id": "101",
+            "cname": "科希马",
+            "area_id": ""
+        },
+        {
+            "id": "614",
+            "country_id": "101",
+            "cname": "拉杰果德",
+            "area_id": ""
+        },
+        {
+            "id": "615",
+            "country_id": "101",
+            "cname": "兰契",
+            "area_id": ""
+        },
+        {
+            "id": "616",
+            "country_id": "101",
+            "cname": "勒克瑙",
+            "area_id": ""
+        },
+        {
+            "id": "617",
+            "country_id": "101",
+            "cname": "卢迪亚纳",
+            "area_id": ""
+        },
+        {
+            "id": "618",
+            "country_id": "101",
+            "cname": "马杜赖",
+            "area_id": ""
+        },
+        {
+            "id": "619",
+            "country_id": "101",
+            "cname": "迈索尔",
+            "area_id": ""
+        },
+        {
+            "id": "620",
+            "country_id": "101",
+            "cname": "孟买",
+            "area_id": ""
+        },
+        {
+            "id": "621",
+            "country_id": "101",
+            "cname": "密拉特",
+            "area_id": ""
+        },
+        {
+            "id": "622",
+            "country_id": "101",
+            "cname": "摩哈里",
+            "area_id": ""
+        },
+        {
+            "id": "623",
+            "country_id": "101",
+            "cname": "那格浦尔",
+            "area_id": ""
+        },
+        {
+            "id": "624",
+            "country_id": "101",
+            "cname": "纳西克",
+            "area_id": ""
+        },
+        {
+            "id": "625",
+            "country_id": "101",
+            "cname": "潘切库拉",
+            "area_id": ""
+        },
+        {
+            "id": "626",
+            "country_id": "101",
+            "cname": "平钦",
+            "area_id": ""
+        },
+        {
+            "id": "627",
+            "country_id": "101",
+            "cname": "浦那",
+            "area_id": ""
+        },
+        {
+            "id": "628",
+            "country_id": "101",
+            "cname": "斯利那加",
+            "area_id": ""
+        },
+        {
+            "id": "629",
+            "country_id": "101",
+            "cname": "苏拉特",
+            "area_id": ""
+        },
+        {
+            "id": "630",
+            "country_id": "101",
+            "cname": "塔那",
+            "area_id": ""
+        },
+        {
+            "id": "631",
+            "country_id": "101",
+            "cname": "特里凡得琅",
+            "area_id": ""
+        },
+        {
+            "id": "632",
+            "country_id": "101",
+            "cname": "瓦拉纳西",
+            "area_id": ""
+        },
+        {
+            "id": "633",
+            "country_id": "101",
+            "cname": "维杰亚瓦达",
+            "area_id": ""
+        },
+        {
+            "id": "634",
+            "country_id": "101",
+            "cname": "维沙卡帕特南",
+            "area_id": ""
+        },
+        {
+            "id": "635",
+            "country_id": "101",
+            "cname": "喜马偕尔邦",
+            "area_id": ""
+        },
+        {
+            "id": "636",
+            "country_id": "101",
+            "cname": "新德里",
+            "area_id": ""
+        },
+        {
+            "id": "637",
+            "country_id": "101",
+            "cname": "新孟买",
+            "area_id": ""
+        },
+        {
+            "id": "638",
+            "country_id": "101",
+            "cname": "曼尼普尔邦",
+            "area_id": ""
+        },
+        {
+            "id": "639",
+            "country_id": "101",
+            "cname": "印多尔",
+            "area_id": ""
+        },
+        {
+            "id": "640",
+            "country_id": "101",
+            "cname": "斋浦尔",
+            "area_id": ""
+        },
+        {
+            "id": "641",
+            "country_id": "101",
+            "cname": "詹谢普尔",
+            "area_id": ""
+        },
+        {
+            "id": "642",
+            "country_id": "74",
+            "cname": "安东尼",
+            "area_id": ""
+        },
+        {
+            "id": "643",
+            "country_id": "74",
+            "cname": "洛里昂",
+            "area_id": ""
+        },
+        {
+            "id": "644",
+            "country_id": "74",
+            "cname": "圣康坦",
+            "area_id": ""
+        },
+        {
+            "id": "645",
+            "country_id": "74",
+            "cname": "大努瓦西",
+            "area_id": ""
+        },
+        {
+            "id": "646",
+            "country_id": "74",
+            "cname": "萨塞勒",
+            "area_id": ""
+        },
+        {
+            "id": "647",
+            "country_id": "74",
+            "cname": "尼奥尔",
+            "area_id": ""
+        },
+        {
+            "id": "648",
+            "country_id": "74",
+            "cname": "佩萨克",
+            "area_id": ""
+        },
+        {
+            "id": "649",
+            "country_id": "74",
+            "cname": "韦尼雪",
+            "area_id": ""
+        },
+        {
+            "id": "650",
+            "country_id": "74",
+            "cname": "尚贝里",
+            "area_id": ""
+        },
+        {
+            "id": "651",
+            "country_id": "74",
+            "cname": "沙勒维尔 - 梅济耶尔",
+            "area_id": ""
+        },
+        {
+            "id": "652",
+            "country_id": "74",
+            "cname": "博韦",
+            "area_id": ""
+        },
+        {
+            "id": "653",
+            "country_id": "74",
+            "cname": "塞日",
+            "area_id": ""
+        },
+        {
+            "id": "654",
+            "country_id": "74",
+            "cname": "勒瓦卢瓦 - 佩雷",
+            "area_id": ""
+        },
+        {
+            "id": "655",
+            "country_id": "74",
+            "cname": "绍莱",
+            "area_id": ""
+        },
+        {
+            "id": "656",
+            "country_id": "74",
+            "cname": "阿雅克肖",
+            "area_id": ""
+        },
+        {
+            "id": "656",
+            "country_id": "74",
+            "cname": "伊西莱穆利诺",
+            "area_id": ""
+        },
+        {
+            "id": "658",
+            "country_id": "74",
+            "cname": "蒙托邦",
+            "area_id": ""
+        },
+        {
+            "id": "659",
+            "country_id": "74",
+            "cname": "瓦讷",
+            "area_id": ""
+        },
+        {
+            "id": "660",
+            "country_id": "74",
+            "cname": "伊埃雷",
+            "area_id": ""
+        },
+        {
+            "id": "661",
+            "country_id": "74",
+            "cname": "埃夫勒",
+            "area_id": ""
+        },
+        {
+            "id": "662",
+            "country_id": "74",
+            "cname": "迈松阿尔福",
+            "area_id": ""
+        },
+        {
+            "id": "663",
+            "country_id": "74",
+            "cname": "塞纳河畔伊夫里",
+            "area_id": ""
+        },
+        {
+            "id": "664",
+            "country_id": "74",
+            "cname": "拉瓦勒",
+            "area_id": ""
+        },
+        {
+            "id": "665",
+            "country_id": "74",
+            "cname": "丰特奈苏布瓦",
+            "area_id": ""
+        },
+        {
+            "id": "666",
+            "country_id": "74",
+            "cname": "圣马洛",
+            "area_id": ""
+        },
+        {
+            "id": "667",
+            "country_id": "74",
+            "cname": "卡宴",
+            "area_id": ""
+        },
+        {
+            "id": "668",
+            "country_id": "74",
+            "cname": "阿尔勒",
+            "area_id": ""
+        },
+        {
+            "id": "669",
+            "country_id": "74",
+            "cname": "贝尔福",
+            "area_id": ""
+        },
+        {
+            "id": "700",
+            "country_id": "74",
+            "cname": "阿讷西",
+            "area_id": ""
+        },
+        {
+            "id": "701",
+            "country_id": "74",
+            "cname": "萨特鲁维尔",
+            "area_id": ""
+        },
+        {
+            "id": "702",
+            "country_id": "74",
+            "cname": "克利希",
+            "area_id": ""
+        },
+        {
+            "id": "703",
+            "country_id": "74",
+            "cname": "索恩河畔沙隆",
+            "area_id": ""
+        },
+        {
+            "id": "704",
+            "country_id": "108",
+            "cname": "佩鲁贾",
+            "area_id": ""
+        },
+        {
+            "id": "705",
+            "country_id": "108",
+            "cname": "里窝那",
+            "area_id": ""
+        },
+        {
+            "id": "706",
+            "country_id": "108",
+            "cname": "雷焦艾米利亚",
+            "area_id": ""
+        },
+        {
+            "id": "707",
+            "country_id": "108",
+            "cname": "卡利亚里",
+            "area_id": ""
+        },
+        {
+            "id": "708",
+            "country_id": "108",
+            "cname": "福贾",
+            "area_id": ""
+        },
+        {
+            "id": "709",
+            "country_id": "108",
+            "cname": "拉韦纳",
+            "area_id": ""
+        },
+        {
+            "id": "710",
+            "country_id": "108",
+            "cname": "里米尼",
+            "area_id": ""
+        },
+        {
+            "id": "711",
+            "country_id": "108",
+            "cname": "费拉拉",
+            "area_id": ""
+        },
+        {
+            "id": "712",
+            "country_id": "108",
+            "cname": "萨莱诺",
+            "area_id": ""
+        },
+        {
+            "id": "713",
+            "country_id": "108",
+            "cname": "萨萨里",
+            "area_id": ""
+        },
+        {
+            "id": "714",
+            "country_id": "108",
+            "cname": "锡拉库萨",
+            "area_id": ""
+        },
+        {
+            "id": "715",
+            "country_id": "108",
+            "cname": "佩斯卡拉",
+            "area_id": ""
+        },
+        {
+            "id": "716",
+            "country_id": "108",
+            "cname": "蒙扎",
+            "area_id": ""
+        },
+        {
+            "id": "717",
+            "country_id": "108",
+            "cname": "贝加莫",
+            "area_id": ""
+        },
+        {
+            "id": "718",
+            "country_id": "108",
+            "cname": "维琴察",
+            "area_id": ""
+        },
+        {
+            "id": "719",
+            "country_id": "108",
+            "cname": "拉蒂纳",
+            "area_id": ""
+        },
+        {
+            "id": "720",
+            "country_id": "108",
+            "cname": "弗利",
+            "area_id": ""
+        },
+        {
+            "id": "721",
+            "country_id": "108",
+            "cname": "特伦托",
+            "area_id": ""
+        },
+        {
+            "id": "722",
+            "country_id": "108",
+            "cname": "坎帕尼亚朱利亚诺",
+            "area_id": ""
+        },
+        {
+            "id": "723",
+            "country_id": "108",
+            "cname": "特尔尼",
+            "area_id": ""
+        },
+        {
+            "id": "724",
+            "country_id": "108",
+            "cname": "诺瓦拉",
+            "area_id": ""
+        },
+        {
+            "id": "725",
+            "country_id": "108",
+            "cname": "安科纳",
+            "area_id": ""
+        },
+        {
+            "id": "726",
+            "country_id": "108",
+            "cname": "博尔扎诺",
+            "area_id": ""
+        },
+        {
+            "id": "727",
+            "country_id": "108",
+            "cname": "皮亚琴察",
+            "area_id": ""
+        },
+        {
+            "id": "728",
+            "country_id": "108",
+            "cname": "安德里亚",
+            "area_id": ""
+        },
+        {
+            "id": "729",
+            "country_id": "108",
+            "cname": "乌迪内",
+            "area_id": ""
+        },
+        {
+            "id": "730",
+            "country_id": "108",
+            "cname": "阿雷佐",
+            "area_id": ""
+        },
+        {
+            "id": "731",
+            "country_id": "108",
+            "cname": "卡坦扎罗",
+            "area_id": ""
+        },
+        {
+            "id": "732",
+            "country_id": "108",
+            "cname": "拉斯佩齐亚",
+            "area_id": ""
+        },
+        {
+            "id": "733",
+            "country_id": "108",
+            "cname": "切塞纳",
+            "area_id": ""
+        },
+        {
+            "id": "734",
+            "country_id": "108",
+            "cname": "莱切",
+            "area_id": ""
+        },
+        {
+            "id": "735",
+            "country_id": "108",
+            "cname": "巴列塔",
+            "area_id": ""
+        },
+        {
+            "id": "736",
+            "country_id": "108",
+            "cname": "佩萨罗",
+            "area_id": ""
+        },
+        {
+            "id": "737",
+            "country_id": "108",
+            "cname": "亚历山德里亚",
+            "area_id": ""
+        },
+        {
+            "id": "738",
+            "country_id": "108",
+            "cname": "布林迪西",
+            "area_id": ""
+        },
+        {
+            "id": "739",
+            "country_id": "108",
+            "cname": "托雷德尔格雷科",
+            "area_id": ""
+        },
+        {
+            "id": "740",
+            "country_id": "108",
+            "cname": "比萨",
+            "area_id": ""
+        },
+        {
+            "id": "741",
+            "country_id": "108",
+            "cname": "皮斯托亚",
+            "area_id": ""
+        },
+        {
+            "id": "742",
+            "country_id": "108",
+            "cname": "科莫",
+            "area_id": ""
+        },
+        {
+            "id": "743",
+            "country_id": "108",
+            "cname": "波佐利",
+            "area_id": ""
+        },
+        {
+            "id": "744",
+            "country_id": "108",
+            "cname": "马尔萨拉",
+            "area_id": ""
+        },
+        {
+            "id": "745",
+            "country_id": "108",
+            "cname": "卢卡",
+            "area_id": ""
+        },
+        {
+            "id": "746",
+            "country_id": "108",
+            "cname": "瓦雷泽",
+            "area_id": ""
+        },
+        {
+            "id": "747",
+            "country_id": "108",
+            "cname": "特雷维索",
+            "area_id": ""
+        },
+        {
+            "id": "748",
+            "country_id": "108",
+            "cname": "卡索里亚",
+            "area_id": ""
+        },
+        {
+            "id": "749",
+            "country_id": "108",
+            "cname": "塞斯托 - 圣乔凡尼",
+            "area_id": ""
+        },
+        {
+            "id": "750",
+            "country_id": "108",
+            "cname": "布斯托阿西齐奥",
+            "area_id": ""
+        },
+        {
+            "id": "751",
+            "country_id": "108",
+            "cname": "卡塞塔",
+            "area_id": ""
+        },
+        {
+            "id": "752",
+            "country_id": "108",
+            "cname": "格罗塞托",
+            "area_id": ""
+        },
+        {
+            "id": "753",
+            "country_id": "108",
+            "cname": "杰拉",
+            "area_id": ""
+        },
+        {
+            "id": "754",
+            "country_id": "108",
+            "cname": "圭多尼亚蒙特切利奥",
+            "area_id": ""
+        },
+        {
+            "id": "755",
+            "country_id": "108",
+            "cname": "奇尼塞洛巴尔萨莫",
+            "area_id": ""
+        },
+        {
+            "id": "756",
+            "country_id": "108",
+            "cname": "阿斯蒂",
+            "area_id": ""
+        },
+        {
+            "id": "757",
+            "country_id": "108",
+            "cname": "拉奎拉",
+            "area_id": ""
+        },
+        {
+            "id": "758",
+            "country_id": "108",
+            "cname": "拉古萨",
+            "area_id": ""
+        },
+        {
+            "id": "759",
+            "country_id": "108",
+            "cname": "克雷莫纳",
+            "area_id": ""
+        },
+        {
+            "id": "760",
+            "country_id": "108",
+            "cname": "帕维亚",
+            "area_id": ""
+        },
+        {
+            "id": "761",
+            "country_id": "108",
+            "cname": "特拉帕尼",
+            "area_id": ""
+        },
+        {
+            "id": "762",
+            "country_id": "108",
+            "cname": "夸尔图 - 圣埃莱娜",
+            "area_id": ""
+        },
+        {
+            "id": "763",
+            "country_id": "108",
+            "cname": "拉梅齐亚泰尔梅",
+            "area_id": ""
+        },
+        {
+            "id": "764",
+            "country_id": "108",
+            "cname": "科森扎",
+            "area_id": ""
+        },
+        {
+            "id": "765",
+            "country_id": "108",
+            "cname": "马萨",
+            "area_id": ""
+        },
+        {
+            "id": "766",
+            "country_id": "108",
+            "cname": "波坦察",
+            "area_id": ""
+        },
+        {
+            "id": "767",
+            "country_id": "108",
+            "cname": "阿尔塔穆拉",
+            "area_id": ""
+        },
+        {
+            "id": "768",
+            "country_id": "108",
+            "cname": "伊莫拉",
+            "area_id": ""
+        },
+        {
+            "id": "769",
+            "country_id": "108",
+            "cname": "斯塔比亚海堡",
+            "area_id": ""
+        },
+        {
+            "id": "770",
+            "country_id": "108",
+            "cname": "卡尔皮",
+            "area_id": ""
+        },
+        {
+            "id": "771",
+            "country_id": "108",
+            "cname": "卡拉拉",
+            "area_id": ""
+        },
+        {
+            "id": "772",
+            "country_id": "108",
+            "cname": "阿普里利亚",
+            "area_id": ""
+        },
+        {
+            "id": "773",
+            "country_id": "108",
+            "cname": "阿夫拉戈拉",
+            "area_id": ""
+        },
+        {
+            "id": "774",
+            "country_id": "108",
+            "cname": "维亚雷焦",
+            "area_id": ""
+        },
+        {
+            "id": "775",
+            "country_id": "108",
+            "cname": "贝内文托",
+            "area_id": ""
+        },
+        {
+            "id": "776",
+            "country_id": "108",
+            "cname": "法诺",
+            "area_id": ""
+        },
+        {
+            "id": "777",
+            "country_id": "108",
+            "cname": "萨沃纳",
+            "area_id": ""
+        },
+        {
+            "id": "778",
+            "country_id": "108",
+            "cname": "维多利亚",
+            "area_id": ""
+        },
+        {
+            "id": "779",
+            "country_id": "108",
+            "cname": "菲乌米奇诺",
+            "area_id": ""
+        },
+        {
+            "id": "780",
+            "country_id": "108",
+            "cname": "克罗托内",
+            "area_id": ""
+        },
+        {
+            "id": "781",
+            "country_id": "108",
+            "cname": "维泰博",
+            "area_id": ""
+        },
+        {
+            "id": "782",
+            "country_id": "108",
+            "cname": "卡尔塔尼塞塔",
+            "area_id": ""
+        },
+        {
+            "id": "783",
+            "country_id": "108",
+            "cname": "莫尔费塔",
+            "area_id": ""
+        },
+        {
+            "id": "784",
+            "country_id": "108",
+            "cname": "马泰拉",
+            "area_id": ""
+        },
+        {
+            "id": "785",
+            "country_id": "108",
+            "cname": "维杰瓦诺",
+            "area_id": ""
+        },
+        {
+            "id": "786",
+            "country_id": "108",
+            "cname": "阿格里真托",
+            "area_id": ""
+        },
+        {
+            "id": "787",
+            "country_id": "108",
+            "cname": "马拉诺 - 迪那波利",
+            "area_id": ""
+        },
+        {
+            "id": "788",
+            "country_id": "108",
+            "cname": "切里尼奥拉",
+            "area_id": ""
+        },
+        {
+            "id": "789",
+            "country_id": "108",
+            "cname": "曼弗雷多尼亚",
+            "area_id": ""
+        },
+        {
+            "id": "790",
+            "country_id": "108",
+            "cname": "阿韦利诺",
+            "area_id": ""
+        },
+        {
+            "id": "791",
+            "country_id": "108",
+            "cname": "莱尼亚诺",
+            "area_id": ""
+        },
+        {
+            "id": "792",
+            "country_id": "108",
+            "cname": "圣雷莫",
+            "area_id": ""
+        },
+        {
+            "id": "793",
+            "country_id": "108",
+            "cname": "蒙卡列里",
+            "area_id": ""
+        },
+        {
+            "id": "794",
+            "country_id": "108",
+            "cname": "比通托",
+            "area_id": ""
+        },
+        {
+            "id": "795",
+            "country_id": "108",
+            "cname": "波蒂奇",
+            "area_id": ""
+        },
+        {
+            "id": "796",
+            "country_id": "108",
+            "cname": "埃尔科拉诺",
+            "area_id": ""
+        },
+        {
+            "id": "797",
+            "country_id": "108",
+            "cname": "福利尼奥",
+            "area_id": ""
+        },
+        {
+            "id": "798",
+            "country_id": "108",
+            "cname": "圣塞韦罗",
+            "area_id": ""
+        },
+        {
+            "id": "799",
+            "country_id": "108",
+            "cname": "法恩扎",
+            "area_id": ""
+        },
+        {
+            "id": "800",
+            "country_id": "108",
+            "cname": "巴盖里亚",
+            "area_id": ""
+        },
+        {
+            "id": "801",
+            "country_id": "108",
+            "cname": "基耶蒂",
+            "area_id": ""
+        },
+        {
+            "id": "802",
+            "country_id": "108",
+            "cname": "库内奥",
+            "area_id": ""
+        },
+        {
+            "id": "803",
+            "country_id": "108",
+            "cname": "莫迪卡",
+            "area_id": ""
+        },
+        {
+            "id": "804",
+            "country_id": "108",
+            "cname": "比谢列",
+            "area_id": ""
+        },
+        {
+            "id": "805",
+            "country_id": "108",
+            "cname": "锡耶纳",
+            "area_id": ""
+        },
+        {
+            "id": "806",
+            "country_id": "108",
+            "cname": "特拉尼",
+            "area_id": ""
+        },
+        {
+            "id": "807",
+            "country_id": "108",
+            "cname": "卡瓦德蒂雷尼",
+            "area_id": ""
+        },
+        {
+            "id": "808",
+            "country_id": "108",
+            "cname": "泰拉莫",
+            "area_id": ""
+        },
+        {
+            "id": "809",
+            "country_id": "108",
+            "cname": "阿奇雷亚莱",
+            "area_id": ""
+        },
+        {
+            "id": "810",
+            "country_id": "108",
+            "cname": "波梅齐亚",
+            "area_id": ""
+        },
+        {
+            "id": "811",
+            "country_id": "108",
+            "cname": "阿切拉",
+            "area_id": ""
+        },
+        {
+            "id": "812",
+            "country_id": "108",
+            "cname": "阿韦尔萨",
+            "area_id": ""
+        },
+        {
+            "id": "813",
+            "country_id": "108",
+            "cname": "蒂沃利",
+            "area_id": ""
+        },
+        {
+            "id": "814",
+            "country_id": "108",
+            "cname": "阿斯科利皮切诺",
+            "area_id": ""
+        },
+        {
+            "id": "815",
+            "country_id": "108",
+            "cname": "奇维塔韦基亚",
+            "area_id": ""
+        },
+        {
+            "id": "816",
+            "country_id": "108",
+            "cname": "马扎拉 - 德尔瓦洛",
+            "area_id": ""
+        },
+        {
+            "id": "817",
+            "country_id": "108",
+            "cname": "罗维戈",
+            "area_id": ""
+        },
+        {
+            "id": "818",
+            "country_id": "108",
+            "cname": "坎波巴索",
+            "area_id": ""
+        },
+        {
+            "id": "819",
+            "country_id": "108",
+            "cname": "韦莱特里",
+            "area_id": ""
+        },
+        {
+            "id": "820",
+            "country_id": "108",
+            "cname": "基奥贾",
+            "area_id": ""
+        },
+        {
+            "id": "821",
+            "country_id": "108",
+            "cname": "巴蒂帕利亚",
+            "area_id": ""
+        },
+        {
+            "id": "822",
+            "country_id": "108",
+            "cname": "斯卡法蒂",
+            "area_id": ""
+        },
+        {
+            "id": "823",
+            "country_id": "108",
+            "cname": "那不勒斯省卡萨尔诺沃",
+            "area_id": ""
+        },
+        {
+            "id": "824",
+            "country_id": "108",
+            "cname": "波代诺内",
+            "area_id": ""
+        },
+        {
+            "id": "825",
+            "country_id": "108",
+            "cname": "罗镇",
+            "area_id": ""
+        },
+        {
+            "id": "826",
+            "country_id": "108",
+            "cname": "奥尔比亚",
+            "area_id": ""
+        },
+        {
+            "id": "827",
+            "country_id": "238",
+            "cname": "乔治",
+            "area_id": ""
+        },
+        {
+            "id": "828",
+            "country_id": "238",
+            "cname": "埃尔默洛",
+            "area_id": ""
+        },
+        {
+            "id": "829",
+            "country_id": "238",
+            "cname": "伊索波",
+            "area_id": ""
+        },
+        {
+            "id": "830",
+            "country_id": "238",
+            "cname": "斯坦格",
+            "area_id": ""
+        },
+        {
+            "id": "831",
+            "country_id": "238",
+            "cname": "东巴克利",
+            "area_id": ""
+        },
+        {
+            "id": "832",
+            "country_id": "238",
+            "cname": "库鲁曼",
+            "area_id": ""
+        },
+        {
+            "id": "833",
+            "country_id": "238",
+            "cname": "理查兹湾",
+            "area_id": ""
+        },
+        {
+            "id": "834",
+            "country_id": "238",
+            "cname": "韦尔科姆",
+            "area_id": ""
+        },
+        {
+            "id": "835",
+            "country_id": "238",
+            "cname": "吉亚尼",
+            "area_id": ""
+        },
+        {
+            "id": "836",
+            "country_id": "238",
+            "cname": "斯普林博克",
+            "area_id": ""
+        },
+        {
+            "id": "837",
+            "country_id": "238",
+            "cname": "梅富根",
+            "area_id": ""
+        },
+        {
+            "id": "838",
+            "country_id": "238",
+            "cname": "米德尔堡",
+            "area_id": ""
+        },
+        {
+            "id": "839",
+            "country_id": "238",
+            "cname": "乌姆塔塔",
+            "area_id": ""
+        },
+        {
+            "id": "840",
+            "country_id": "238",
+            "cname": "布雷达斯多普",
+            "area_id": ""
+        },
+        {
+            "id": "841",
+            "country_id": "238",
+            "cname": "德阿尔",
+            "area_id": ""
+        },
+        {
+            "id": "842",
+            "country_id": "238",
+            "cname": "弗里尼欣",
+            "area_id": ""
+        },
+        {
+            "id": "843",
+            "country_id": "238",
+            "cname": "格罗布勒斯达尔",
+            "area_id": ""
+        },
+        {
+            "id": "844",
+            "country_id": "238",
+            "cname": "普达迪泽巴",
+            "area_id": ""
+        },
+        {
+            "id": "845",
+            "country_id": "238",
+            "cname": "谢普斯敦港",
+            "area_id": ""
+        },
+        {
+            "id": "846",
+            "country_id": "238",
+            "cname": "彼得马里茨堡",
+            "area_id": ""
+        },
+        {
+            "id": "847",
+            "country_id": "238",
+            "cname": "姆库泽",
+            "area_id": ""
+        },
+        {
+            "id": "848",
+            "country_id": "238",
+            "cname": "丹地",
+            "area_id": ""
+        },
+        {
+            "id": "849",
+            "country_id": "238",
+            "cname": "雷地史密斯",
+            "area_id": ""
+        },
+        {
+            "id": "850",
+            "country_id": "238",
+            "cname": "索赫燕杜",
+            "area_id": ""
+        },
+        {
+            "id": "851",
+            "country_id": "238",
+            "cname": "莫迪默勒",
+            "area_id": ""
+        },
+        {
+            "id": "852",
+            "country_id": "238",
+            "cname": "穆里斯堡",
+            "area_id": ""
+        },
+        {
+            "id": "853",
+            "country_id": "238",
+            "cname": "兰德方坦",
+            "area_id": ""
+        },
+        {
+            "id": "854",
+            "country_id": "238",
+            "cname": "特龙普斯堡",
+            "area_id": ""
+        },
+        {
+            "id": "855",
+            "country_id": "238",
+            "cname": "乌平通",
+            "area_id": ""
+        },
+        {
+            "id": "856",
+            "country_id": "238",
+            "cname": "乌伦迪",
+            "area_id": ""
         }
     ]
 }

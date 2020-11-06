@@ -5,7 +5,7 @@ import STATES from '../json/add/states-add.json'
 import CITIES from '../json/add/cities-add.json'
 
 // ./add .... 扩充数据后的json
-// ./origin ....原数据后的json
+// ./origin ....原数据 json
 
 // continents   亚洲、欧洲 etc.
 // countries  中国、法国 etc.
@@ -13,6 +13,21 @@ import CITIES from '../json/add/cities-add.json'
 // cities
 // regions
 // https://github.com/wizardcode/world-area/blob/master/children/json/continents.json
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 let combArr = COUNTRIES["RECORDS"].map((a, k1) => (
