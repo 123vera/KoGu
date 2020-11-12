@@ -31,6 +31,14 @@
       right: 0;
       margin-top: 60px;
     }
+
+    span {
+      display: inline-block;
+      width: 100%;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: left;
+    }
   }
 
   @keyframes lineToRight {
@@ -46,6 +54,8 @@
   h1 {
     padding-bottom: 40px;
   }
+
+ 
 }
 
 .catalogue a {

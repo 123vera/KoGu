@@ -9,7 +9,7 @@ import { Button } from 'antd/lib/radio';
 // A中有个值  c要用， 常规做法是 A-B-C，需要一级一级的传递
 // 使用React.createContext  可以省略A-B、B-C，也就是直接A-C，C中使用this.context获取值
 const ThemeContext = React.createContext('light')
-const { Provider, Consumer } = React.createContext('light')  // 
+const { Provider } = React.createContext('light')  // 
 
 class ReactIndex extends React.Component{
   render(){

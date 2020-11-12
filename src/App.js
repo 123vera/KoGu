@@ -1,24 +1,25 @@
-import React, { Component, Suspense, lazy } from 'react';
+import React, { Component, lazy } from 'react';
 import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom'
 import InputItem from './components/common/InputItem'
 import Interview from './components/hook/Interview'
 import HtmlTag from './components/common/HtmlTag'
 import ES from './components/common/Es'
-import Animate from './pages/animate'
-import Line from './pages/threejs/Line'
-import InterLine from './pages/threejs/interLine'
-import Curve from './pages/threejs/Curve'
-import Home from './pages/home'
-import ReactHook from './pages/reactHook'
-import Javascript from './pages/javascript/jsTest1.js'
-import ReactSenior from './pages/reactJs/reactSenior.js'
-import ReactSource from './pages/reactJs/reactSource.js'
-import ReactRef from './pages/reactJs/senior/ref'
-import ReactContext from './pages/reactJs/senior/context'
+import Line from './pages/THREEJS/Line'
+import InterLine from './pages/THREEJS/interLine'
+import Curve from './pages/THREEJS/Curve'
+import Home from './pages/JAVASCRIPT/home'
+import ReactHook from './pages/JAVASCRIPT/reactHook'
+import Javascript from './pages/JAVASCRIPT/jsTest1.js'
+import CloneDeep from './pages/JAVASCRIPT/cloneDeep.js'
+import ReactSenior from './pages/JAVASCRIPT/reactJs/reactSenior.js'
+import ReactSource from './pages/JAVASCRIPT/reactJs/reactSource.js'
+import ReactRef from './pages/JAVASCRIPT/reactJs/senior/ref'
+import ReactContext from './pages/JAVASCRIPT/reactJs/senior/context'
 import Catalogue from './pages/catalogue'
 import IndexHome from './pages/index'
-import Scrollreveal from './pages/scrollreveal'
-import WorldArea from './pages/worldArea'
+import Scrollreveal from './pages/HTML/scrollreveal'
+import WorldArea from './pages/HTML/worldArea'
+import Css from './pages/CSS/index'
 // import dynamic from 'next/dynamic'
 import './App.css';
 import 'antd/dist/antd.css';
@@ -46,8 +47,8 @@ import 'antd/dist/antd.css';
 // // 输出结果
 // console.log(JSON.stringify(data, null, 4))
 
-export const HomeComponent = lazy(() => import('./pages/home'))
-export const HtmlTagComponent = lazy(() => import('./pages/home'))
+export const HomeComponent = lazy(() => import('./pages/JAVASCRIPT/home'))
+export const HtmlTagComponent = lazy(() => import('./pages/JAVASCRIPT/home'))
 
 // const HomeComponent = dynamic(  // 自定义加载组件 nextjs
 //   import('../components/loading'),
@@ -81,7 +82,7 @@ class App extends Component {
             <Route path='/home' component={Home} />
             <Route path='/htmlTag' component={HtmlTag} />
             <Route path='/inputItem' component={InputItem} />
-            <Route path='/animate' component={Animate} />
+            {/* <Route path='/animate' component={Animate} /> */}
             <Route path='/line' component={Line} />
             <Route path='/interLine' component={InterLine} />
             {/* <Route path='/axis' component={Axis} /> */}
@@ -90,6 +91,8 @@ class App extends Component {
             <Route path='/js' component={Javascript} />
             <Route path='/scrollreveal' component={Scrollreveal} />
             <Route path='/worldArea' component={WorldArea} />
+            <Route path='/css' component={Css} />
+            <Route path='/cloneDeep' component={CloneDeep} /> 
           </Switch>
         </Router>
 

@@ -44,17 +44,6 @@ function Index() {
             delay: 750
         }
 
-
-
-        const btnSpanConfig = {
-            duration: 1000,
-            opacity: 0,
-            rotate: { x: -180, y: 0, z: 0 },
-
-            // viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-            // scale: (1.05, 1.05, 1.05),
-        }
-
         sr.reveal('h3', titleFromTopConfig)
 
         sr.reveal('h4', titleFromBottomConfig)
@@ -79,7 +68,7 @@ function Index() {
                 <h3>标题1标题1</h3>
                 <p >内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1内容1</p>
                 <div className="btn-group">
-                    <a className="btn btn-left">
+                    <a className="btn btn-left" href="#">
                         <div className="spans">brn1 brn1rrr</div>
                     </a>
                     <button className="btn btn-right">

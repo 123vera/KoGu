@@ -1,16 +1,14 @@
 {
-  "prettier.jsxSingleQuote": true, // 问题1中的设置
-  "editor.formatOnSave": true,
-  "clang-format.executable": "clang-format",
-  "vetur.format.defaultFormatter.html": "prettier",
   // "vetur.format.defaultFormatter.html": "js-beautify-html",
-  "vetur.format.defaultFormatterOptions": {
-    "js-beautify-html": {
-      "wrap_attributes": "aligned-multiple"
-    },
-    "prettyhtml": {
-      "printWidth": 300,
-      "singleQuote": true,
-    }
-  }
+  // "vetur.format.defaultFormatterOptions": {
+  //   "js-beautify-html": {
+  //     "wrap_attributes": "force-aligned"
+  //   }
+  // },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

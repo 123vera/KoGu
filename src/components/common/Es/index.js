@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 // ES11 新语法
 function ES(){
   const [ number,  setNumber] = useState(1)
-  const [ number2,  setNumber2] = useState(1)
 
   const changeNumber = function *(){
     if(number > 40)return 
@@ -41,13 +40,6 @@ function ES(){
 
  
 }
-
-const flower = {
-  colors: {
-      red: true
-  }
-}
-
 
 
 

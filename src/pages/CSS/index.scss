@@ -1,0 +1,23 @@
+/* This is a CSS comment */
+#clampCss{
+    margin: auto;
+    width: max(900px, calc(90% + 300px)); /* 其含义是宽度设置为  1000px，当 calc(70% + 100px) 比  1000px 小时，宽度为 calc(70% + 100px) 。min() 允许你设置一个上限值。 */
+    font-size: clamp(12px, 5vw, 24px);
+
+    img {
+        height: clamp(100px, 800px, 400px);
+        pointer-events: none;
+    }
+
+    figcaption{
+        width: max(900px, calc(90% + 300px));
+    }
+
+      
+      h1 {
+        letter-spacing: 2px;
+        font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+      }
+      
+     
+}

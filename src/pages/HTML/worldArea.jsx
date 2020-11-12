@@ -1,8 +1,8 @@
 import { Cascader } from 'antd'
 import React from 'react'
-import COUNTRIES from '../json/add/countries-add.json'
-import STATES from '../json/add/states-add.json'
-import CITIES from '../json/add/cities-add.json'
+import COUNTRIES from '../../json/add/countries-add.json'
+import STATES from '../../json/add/states-add.json'
+import CITIES from '../../json/add/cities-add.json'
 
 // ./add .... 扩充数据后的json
 // ./origin ....原数据 json
@@ -13,21 +13,6 @@ import CITIES from '../json/add/cities-add.json'
 // cities
 // regions
 // https://github.com/wizardcode/world-area/blob/master/children/json/continents.json
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 let combArr = COUNTRIES["RECORDS"].map((a, k1) => (
@@ -55,7 +40,7 @@ let combArr = COUNTRIES["RECORDS"].map((a, k1) => (
     }
 ))
 
-console.log('combArr', combArr, combArr.filter(i => i.children !== null && i.children.length !== 0).slice(0, 2))
+// console.log('combArr', combArr, combArr.filter(i => i.children !== null && i.children.length !== 0).slice(0, 2))
 
 
 const Index = () => {

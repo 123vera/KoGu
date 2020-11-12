@@ -1,6 +1,6 @@
 // csstype
 // import * as CSS from 'csstype';
-import React, { useState } from 'react'
+import React from 'react'
 import './index.scss'
 
 // const style: CSS.Properties = {

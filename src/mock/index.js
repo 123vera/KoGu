@@ -1,4 +1,4 @@
-import mockjs from 'mockjs';
+// import mockjs from 'mockjs';
 // import { delay } from 'roadhog-api-doc';  // 需要添加所有的请求延迟的时候， 可以通过第三方插件来简化这个问题
 
 
@@ -26,7 +26,7 @@ import mockjs from 'mockjs';
 
 // 以上真假切换接口
 
-const getNotice =  (req, res) => { res.end('OK'); }
+// const getNotice =  (req, res) => { res.end('OK'); }
 
  const proxy = {
   // Mock.mock( rurl, template )

@@ -1,13 +1,13 @@
-import React, { Component, Fragment } from 'react';
-import Count from '../components/hook/ExampleCount'
+import React, { Component } from 'react';
+import Count from '../../components/hook/ExampleCount'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import axios from "axios";
 import {Router} from 'react-router-dom'
 // import Router from 'next/router'
-import "../mock"
+import "../../mock"
 import './home.scss'
-import { convertToImage } from '../aseets/utils/convertToImage';
-import test1 from '../aseets/imgs/test1.jpg';
+import { convertToImage } from '../../aseets/utils/convertToImage';
+import test1 from '../../aseets/imgs/test1.jpg';
 
 // 如果你在beforePopState中返回 false，Router将不会执行popstate事件。
 // Router.beforePopState(({ url, as, options }) => {
