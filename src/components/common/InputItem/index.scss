@@ -4,7 +4,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
 
     span {
       display: inline-block;
@@ -16,8 +15,7 @@
     width: 50%;
     box-sizing: border-box;
     margin: 10px auto;
-    border: 1px solid #fff;
+    border: 1px solid currentColor;
     background: none;
-    color: #fff;
   }
 }

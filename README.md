@@ -75,3 +75,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 "dev": "NODE_ENV=production nodemon server/index.js",
 "build": "next build",
 "start": "NODE_ENV=production node server/index.js",
+
+## Upgrade 
+https://juejin.im/post/6844904049226039310
+1.接入访问统计图表Echart
+2.微信小程序接入广告 https://wximg.qq.com/wxp/pdftool/get.html?post_id=851 （工具类、艺术类、）
+3.拥有后台管理系统
+4.可以推送

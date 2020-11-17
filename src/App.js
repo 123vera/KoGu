@@ -1,5 +1,6 @@
 import React, { Component, lazy } from 'react';
-import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom'
+import { Switch as SwitchBar } from 'antd'
+import { BrowserRouter as Router, Route,Switch, withRouter } from 'react-router-dom'
 import InputItem from './components/common/InputItem'
 import Interview from './components/hook/Interview'
 import HtmlTag from './components/common/HtmlTag'
@@ -58,8 +59,17 @@ export const HtmlTagComponent = lazy(() => import('./pages/JAVASCRIPT/home'))
 // )
 
 class App extends Component {
+  onSwitchChange(checked) {
+    const isLight = checked
+    if (isLight) {
+      document.querySelector('.App').classList.add("light")
+    } else {
+      document.querySelector('.App').classList.remove("light")
+    }
+  }
+
   render() {
-    document.body.style.setProperty('--themeColor', '#ff0000'); // css 变量方法
+    // document.body.style.setProperty('--themeColor', '#ff0000'); // css 变量方法
     return (
 
       <div className="App">
@@ -68,6 +78,9 @@ class App extends Component {
                 <HomeComponent />
                 <HtmlTagComponent/>
             </Suspense> */}
+        <br/>
+        <SwitchBar checkedChildren="开灯" unCheckedChildren="关灯" defaultChecked={false} onChange={this.onSwitchChange}/>
+        <br/>
 
         <Router>
           <Switch>

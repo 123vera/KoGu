@@ -6,8 +6,6 @@ import * as THREE from 'three';
 import './Line.scss'
 
 
-
-
 class Line extends Component {
   componentDidMount () {
       this.init()
@@ -16,8 +14,6 @@ class Line extends Component {
 
    //定义应用所需的组件:相机,场景,渲染器
    init = ()=> {
-     
-
       //相机参数
       /**
        * 正投影相机设置
@@ -38,7 +34,6 @@ class Line extends Component {
       renderer.setSize( window.innerWidth, window.innerHeight );  //设置渲染器的大小
       document.body.appendChild( renderer.domElement ); 
      
-
 
       // 材质
       var material

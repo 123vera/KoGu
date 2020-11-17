@@ -5,6 +5,7 @@ function Index() {
         complexData()
     }, [])
 
+   
     function complexData(){
         let obj1 = {  name: 'wangsiran' }
         let obj2 = obj1

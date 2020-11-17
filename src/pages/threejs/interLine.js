@@ -15,7 +15,6 @@ import Qipan from './../../aseets/imgs/qipan.png'
 
 
 
-
 class InterLine extends Component {
   componentDidMount () {
       this.init()
