@@ -1,0 +1,9 @@
+div {
+    opacity: 0;
+    will-change: opacity;
+
+
+    &.show {
+       opacity: 1;
+    }
+}
