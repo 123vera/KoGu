@@ -1,9 +1,43 @@
-div {
-    opacity: 0;
-    will-change: opacity;
+.testcss {
+    height: 100%;
+    will-change: height;
 
+    ul {
+        li {
+            text-align: left;
+           
+            .textShadow{
+                color: transparent;
+                text-shadow: var(--c-text-shadow-dark);
+
+                .light & {
+                    text-shadow:  var(--c-text-shadow-light); 
+                 }
+            }
+
+            .blur{
+                display: block;
+                width: 100px;
+                height: 100px;
+                margin: auto;
+                filter: blur(8px);
+              
+            }
+
+            .boxShadow {
+                box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2), 0 0 0 12px rgba(255, 255, 255, 0.2), 0 0 0 18px rgba(255, 255, 255, 0.2), 0 0 0 24px rgba(255, 255, 255, 0.2);
+                height: 200px;
+                margin: 50px auto;
+                width: 400px;
+
+                .light  & {
+                    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.2), 0 0 0 12px rgba(0, 0, 0, 0.2), 0 0 0 18px rgba(0, 0, 0, 0.2), 0 0 0 24px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
 
     &.show {
-       opacity: 1;
+        height: 1;
     }
 }

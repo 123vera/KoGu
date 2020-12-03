@@ -21,6 +21,7 @@ import IndexHome from './pages/index'
 import Scrollreveal from './pages/HTML/scrollreveal'
 import WorldArea from './pages/HTML/worldArea'
 import Css from './pages/CSS/index'
+import Testcss from './pages/CSS/test'
 // import dynamic from 'next/dynamic'
 import './App.css';
 import 'antd/dist/antd.css';
@@ -79,7 +80,7 @@ class App extends Component {
                 <HtmlTagComponent/>
             </Suspense> */}
         <br/>
-        <SwitchBar checkedChildren="开灯" unCheckedChildren="关灯" defaultChecked={false} onChange={this.onSwitchChange}/>
+        <SwitchBar checkedChildren="关灯" unCheckedChildren="开灯" defaultChecked={false} onChange={this.onSwitchChange}/>
         <br/>
 
         <Router>
@@ -105,6 +106,7 @@ class App extends Component {
             <Route path='/scrollreveal' component={Scrollreveal} />
             <Route path='/worldArea' component={WorldArea} />
             <Route path='/css' component={Css} />
+            <Route path='/testcss' component={Testcss} />
             <Route path='/cloneDeep' component={CloneDeep} /> 
           </Switch>
         </Router>

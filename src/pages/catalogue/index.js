@@ -10,7 +10,8 @@ export default function index() {
         <a target="_blank" href="/htmlTag" > 不常用的html标签 </a>
         <a target="_blank" href="/inputItem" > 不常用的表单元素 </a>
         <a target="_blank" href="/worldArea" > 世界国家城市联动 </a>
-        <a target="_blank" href="/css" > 不常用的CSS属性 </a>
+        <a target="_blank" href="/css" > 不常用的CSS属性1 </a>
+        <a target="_blank" href="/testcss" > 不常用的CSS属性2 </a>
         <a target="_blank" href="/scrollreveal" > scrollreveal 双向滚动页面 动画加载</a>
 
         <br/>
