@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import Count from '../../components/hook/ExampleCount'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import axios from "axios";
-import {Router} from 'react-router-dom'
+import { downloadPdf } from './../../aseets/utils/pdf'
+import { Router } from 'react-router-dom'
+// import { Modal, Form, Input, Radio } from "antd";
 // import Router from 'next/router'
 import "../../mock"
 import './home.scss'
@@ -21,73 +23,207 @@ import test1 from '../../aseets/imgs/test1.jpg';
 //   return true
 // });
 
-class Home extends Component {
-  state={
-    imageEl: null
+// 监听页面dom 节点增删，节点样式改变等
+function addObserverIfDesiredNodeAvailable(contents) {
+
+  const MutationObserver = window.MutationObserver || window.WebKitMutationObserver
+  if (MutationObserver) {
+    let waterImageNode = document.querySelector('#waterImageContent');
+
+    if (!waterImageNode) {
+      window.setTimeout(addObserverIfDesiredNodeAvailable, 500);
+      return;
+    }
+
+    var observerOptions = {
+      childList: true,  // 观察目标子节点的变化，是否有添加或者删除
+      attributes: true, // 观察属性变动
+      subtree: true     // 观察后代节点，默认为 false
+    }
+
+    const observer = new MutationObserver(function (list, observer) {
+      let text = {
+        userName: '王大王',
+        tele: 888
+      }
+
+      if ((waterImageNode && !waterImageNode.getAttribute('style').includes('background-image')) || !waterImageNode) {
+
+        // 避免一直触发
+        observer.disconnect();
+        observer = null
+        createCanvasToUrl(JSON.parse(JSON.stringify(text)))
+      }
+    });
+
+    observer.observe(waterImageNode, observerOptions);
+  }
+}
+
+// 水印canvas 转为 base64图片地址
+function createCanvasToUrl(contents) {
+  let styles = {
+    width: '150px',
+    height: '150px',
+    textAlign: 'center',
+    textBaseline: 'middle',
+    font: "10px microsoft yahei",
+    fillStyle: 'rgba(184, 184, 184, 0.8)',
+    rotate: '20',
+    zIndex: 1000,
+  }
+  let { userName, tele } = contents
+
+  var canvas = document.createElement('canvas');
+  canvas.setAttribute('width', styles.width);
+  canvas.setAttribute('height', styles.height);
+  var ctx = canvas.getContext("2d");
+
+  ctx.textAlign = styles.textAlign
+  ctx.textBaseline = styles.textBaseline
+  ctx.font = styles.font;
+  ctx.fillStyle = styles.fillStyle;
+  ctx.rotate(Math.PI / 180 * styles.rotate);
+  ctx.fillText(userName + tele, parseFloat(styles.width) / 3, parseFloat(styles.height) / 3);
+
+  var base64Url = canvas.toDataURL();
+  let waterImageNode = document.getElementById('waterImageContent');
+
+  waterImageNode.setAttribute('style', `background-image: url("${base64Url}")`)
+  addObserverIfDesiredNodeAvailable()
+}
+
+// 水印文字
+function SetWaterImage() {
+
+  let contents = {
+    userName: '王大王',
+    tele: 888
   }
 
-  componentDidMount(){
+  useEffect(() => {
+    createCanvasToUrl(contents)
+
+    addObserverIfDesiredNodeAvailable(contents)
+  }, [document.getElementById('waterImageContent')])
+
+  return (
+    <div id="waterImageContent" >
+      {/* <div className="waterImageContent" style={ { backgroundImage: 'url(' + createCanvasToUrl(contents) + ')' } }> */ }
+      <ul>
+        <li>第一步：准备水印文字（邮箱或用户名）</li>
+        <li>第二步：文字转为canvas或svg</li>
+        <li>第三步：用canvas 或svg 转为base64 图片</li>
+        <li>第四步：以background-image插入base64 </li>
+
+      </ul>
+    </div>
+  )
+}
+
+// dom转canvas 输出pdf 下载
+function DomToPdf() {
+  return (
+    <div id='pdfContainer'>
+      <ul>
+        <li>第一步：定义容器id和内容</li>
+        <li>第二步：安装jsPDF —— new jsPDF()</li>
+        <li>第三步：</li>
+        <li>第四步：</li>
+      </ul>
+      <button onClick={ () => downloadPdf('ttt', '文件1') }>下载</button>
+    </div >
+  )
+}
+
+class Home extends Component {
+  state = {
+    imageEl: null,
+    limitAmount: 10
+  }
+
+  componentDidMount() {
+    return
     axios
-    .get('/api/tags') //这列的'/api/tags'与mock.js文件里的地址一致
-    .then(res=>{
-          //  console.log('323', JSON.stringify(res.data, null, 4))
-    })
+      .get('/api/tags') //这列的'/api/tags'与mock.js文件里的地址一致
+      .then(res => {
+        //  console.log('323', JSON.stringify(res.data, null, 4))
+      })
 
     axios
-    .get(`/api/users/create`) //这列的'/api/users/create'与mock.js文件里的地址一致
-    .then(res=>{
+      .get(`/ api / users / create`) //这列的'/api/users/create'与mock.js文件里的地址一致
+      .then(res => {
         console.log('22222323', res)
-    })
+      })
 
     // Mock.mock( rurl, template )
     axios
-    .get(`/api/currentUser`) //这列的'/api/currentUser'与mock.js文件里的地址一致
-    .then(res=>{
+      .get(`/ api / currentUser`) //这列的'/api/currentUser'与mock.js文件里的地址一致
+      .then(res => {
         console.log('res', res)
-    })
+      })
   }
 
   convert = () => {
-    convertToImage(document.getElementById('homeContainer'), {backgroundColor: null}).then(res => {
-    // convertToImage(document.getElementById('homeContainer'), {width: 100, height: 100,backgroundColor: null}).then(res => {
+    convertToImage(document.getElementById('homeContainer'), { backgroundColor: null, size: 0.8 }).then(res => {
+      // convertToImage(document.getElementById('homeContainer'), {width: 100, height: 100,backgroundColor: null}).then(res => {
       this.setState({ imageEl: res.src })
     })
   }
 
-  render (){
+
+  render() {
     console.log(Router.router && Router.router.pathname)  // 获取路由的方法
 
     return (
-      <div className='home'>
+      <div className='home' id="home">
+        <div id="homeContainer" >
+          <h2 onClick={ () => Router.push('/viinet') }>HookHookHookHookHookHook</h2>
+          <br />
+          <a href="weixin://" >打开微信l</a>
 
-      <div id="homeContainer" > 
-        <h2 onClick={() => Router.push('/viinet')}>HookHookHookHookHookHook</h2>
-        <br/>
-        <a href="weixin://" >打开微信l</a> 
-       
-        <CopyToClipboard
-            style={{ cursor: 'pointer' }}
-            text={'这是一段复制内容'}
-            onCopy={() => alert('複製成功')}
+          <CopyToClipboard
+            style={ { cursor: 'pointer' } }
+            text={ '这是一段复制内容' }
+            onCopy={ () => alert('複製成功') }
           >
-            <span>{'複製地址'}</span>
-          </CopyToClipboard> 
+            <span>{ '複製地址' }</span>
+          </CopyToClipboard>
 
-        <Count/>
+          <Count />
 
-        <img className="testIng" src={test1} alt=""/>  
+          <img className="testIng" src={ test1 } alt="" />
 
-        {/* cdn图片不显示因为跨域问题，待研究 */}
-        {/* <img className="testIng" src="https://cdn.cnviinet.com/viinet-app-web-v2/static/linkafeiquan-202006101045.jpg" alt=""/>  */}
-       </div>
+          {/* cdn图片不显示因为跨域问题，待研究 */ }
+          {/* <img className="testIng" src="https://cdn.cnviinet.com/viinet-app-web-v2/static/linkafeiquan-202006101045.jpg" alt=""/>  */ }
+        </div>
+
+        <div id="ttt">
+          {/* 以下解决的问题是：dom转化为canvas ，再转为图片，并下载或保存，主要方法在 utils/convertToImage 文件*/ }
+          <fieldset>
+            <legend>—— 下载图片 ——</legend>
+            <button onClick={ this.convert }>下载图片</button>
+            <br />
+            <img src={ this.state.imageEl } alt="" />
+          </fieldset>
 
 
-        {/* 以下解决的问题是：dom转化为canvas ，再转为图片，并下载或保存，主要方法在 utils/convertToImage 文件*/}
-        <button onClick={this.convert}>下载图片</button>
-        <br/>
-        <img src={this.state.imageEl} alt=""/>
-      </div>  
-     
+          {/* 实现水印 */ }
+          <fieldset>
+            <legend>—— 实现删不掉的水印 ——</legend>
+            <SetWaterImage />
+          </fieldset>
+
+
+          {/* dom转pdf下载 */ }
+          <fieldset>
+            <legend>—— dom转pdf下载 ——</legend>
+            <DomToPdf />
+          </fieldset>
+
+        </div>
+
+      </div >
     )
   }
 }

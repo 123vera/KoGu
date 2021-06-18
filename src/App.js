@@ -1,13 +1,13 @@
 import React, { Component, lazy } from 'react';
 import { Switch as SwitchBar } from 'antd'
-import { BrowserRouter as Router, Route,Switch, withRouter } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom'
 import InputItem from './components/common/InputItem'
 import Interview from './components/hook/Interview'
 import HtmlTag from './components/common/HtmlTag'
 import ES from './components/common/Es'
-import Line from './pages/THREEJS/Line'
-import InterLine from './pages/THREEJS/interLine'
-import Curve from './pages/THREEJS/Curve'
+import Line from './pages/threejs/Line'
+import InterLine from './pages/threejs/interLine'
+import Curve from './pages/threejs/Curve'
 import Home from './pages/JAVASCRIPT/home'
 import ReactHook from './pages/JAVASCRIPT/reactHook'
 import Javascript from './pages/JAVASCRIPT/jsTest1.js'
@@ -74,44 +74,44 @@ class App extends Component {
     return (
 
       <div className="App">
-        {/* fallback属性也可以是组件，但是目前只支持组件加载的loading，不支持发送请求的loading */}
+        {/* fallback属性也可以是组件，但是目前只支持组件加载的loading，不支持发送请求的loading */ }
         {/* <Suspense fallback="正在加载中..."> 
                 <HomeComponent />
                 <HtmlTagComponent/>
             </Suspense> */}
-        <br/>
-        <SwitchBar checkedChildren="关灯" unCheckedChildren="开灯" defaultChecked={false} onChange={this.onSwitchChange}/>
-        <br/>
+        <br />
+        <SwitchBar checkedChildren="关灯" unCheckedChildren="开灯" defaultChecked={ false } onChange={ this.onSwitchChange } />
+        <br />
 
         <Router>
           <Switch>
-            <Route path='/' exact component={Catalogue} />
-            <Route path='/hook' exact component={ReactHook} />
-            <Route path='/es11' exact component={ES} />
-            <Route path='/react-ref' exact component={ReactRef} />
-            <Route path='/react-context' exact component={ReactContext} />
-            <Route path='/react-source' exact component={ReactSource} />
-            <Route path='/react-senior' exact component={ReactSenior} />
-            <Route path='/index' exact component={IndexHome} />
-            <Route path='/home' component={Home} />
-            <Route path='/htmlTag' component={HtmlTag} />
-            <Route path='/inputItem' component={InputItem} />
-            {/* <Route path='/animate' component={Animate} /> */}
-            <Route path='/line' component={Line} />
-            <Route path='/interLine' component={InterLine} />
-            {/* <Route path='/axis' component={Axis} /> */}
-            <Route path='/curve' component={Curve} />
-            <Route path='/inter' component={Interview} />
-            <Route path='/js' component={Javascript} />
-            <Route path='/scrollreveal' component={Scrollreveal} />
-            <Route path='/worldArea' component={WorldArea} />
-            <Route path='/css' component={Css} />
-            <Route path='/testcss' component={Testcss} />
-            <Route path='/cloneDeep' component={CloneDeep} /> 
+            <Route path='/' exact component={ Catalogue } />
+            <Route path='/hook' exact component={ ReactHook } />
+            <Route path='/es11' exact component={ ES } />
+            <Route path='/react-ref' exact component={ ReactRef } />
+            <Route path='/react-context' exact component={ ReactContext } />
+            <Route path='/react-source' exact component={ ReactSource } />
+            <Route path='/react-senior' exact component={ ReactSenior } />
+            <Route path='/index' exact component={ IndexHome } />
+            <Route path='/home' component={ Home } />
+            <Route path='/htmlTag' component={ HtmlTag } />
+            <Route path='/inputItem' component={ InputItem } />
+            {/* <Route path='/animate' component={Animate} /> */ }
+            <Route path='/line' component={ Line } />
+            <Route path='/interLine' component={ InterLine } />
+            {/* <Route path='/axis' component={Axis} /> */ }
+            <Route path='/curve' component={ Curve } />
+            <Route path='/inter' component={ Interview } />
+            <Route path='/js' component={ Javascript } />
+            <Route path='/scrollreveal' component={ Scrollreveal } />
+            <Route path='/worldArea' component={ WorldArea } />
+            <Route path='/css' component={ Css } />
+            <Route path='/testcss' component={ Testcss } />
+            <Route path='/cloneDeep' component={ CloneDeep } />
           </Switch>
         </Router>
 
-        {/* <Pdf/> */}
+        {/* <Pdf/> */ }
       </div>
 
     );
