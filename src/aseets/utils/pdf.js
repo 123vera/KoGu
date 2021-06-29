@@ -42,28 +42,33 @@ import * as html2canvas from 'html2canvas';
 
 export const downloadPdf = (element, name) => {
     var ele = document.getElementById(element)
+
+    // console.log('ele: ', ele)
+
     // var scrollTop = document.documentElement.scrollTop || ele.scrollTop; // 获取页面滚动高度
 
     html2canvas(ele, {
         backgroundColor: null,
-        scrollY: 0,
+        // scrollY: 0,
         // scrollX: 0,
-        x: 0,
-        y: window.pageYOffset,
-        scale: 2,
-        windowWidth: document.getElementById(element).scrollWidth,
-        windowHeight: document.getElementById(element).scrollHeight,
-        scrollX: 0,
-        scrollY: -window.scrollTop,
+        // x: 0,
+        // y: window.pageYOffset,
+        // scale: 2,
+        // windowWidth: document.getElementById(element).scrollWidth,
+        // windowHeight: document.getElementById(element).scrollHeight,
+        // scrollX: 0,
+        // scrollY: -window.scrollTop,
         // dpi: window.devicePixelRatio * 2,
 
 
 
 
     }).then(canvas => {
+        console.log('canvas: ', canvas)
         var contentWidth = canvas.width;
         var contentHeight = canvas.height;
-
+        // document.getElementById('home').appendChild(canvas)
+        // return
         var pageHeight = contentWidth / 592.28 * 841.89;
         let leftHeight = contentHeight
 

@@ -1,5 +1,6 @@
 import React, { Component, useEffect, useState } from 'react';
 import Count from '../../components/hook/ExampleCount'
+import ExportExcel from '../../components/common/Excel'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import axios from "axios";
 import { downloadPdf } from './../../aseets/utils/pdf'
@@ -131,7 +132,7 @@ function DomToPdf() {
         <li>第三步：</li>
         <li>第四步：</li>
       </ul>
-      <button onClick={ () => downloadPdf('ttt', '文件1') }>下载</button>
+      {/* <button onClick={ () => downloadPdf('888888', '文件2') }>下载</button> */ }
     </div >
   )
 }
@@ -178,6 +179,8 @@ class Home extends Component {
     return (
       <div className='home' id="home">
         <div id="homeContainer" >
+          <button onClick={ () => downloadPdf('pdfContainer', '文件2') }>（必须位于顶部）下载pdf</button>
+
           <h2 onClick={ () => Router.push('/viinet') }>HookHookHookHookHookHook</h2>
           <br />
           <a href="weixin://" >打开微信l</a>
@@ -198,13 +201,23 @@ class Home extends Component {
           {/* <img className="testIng" src="https://cdn.cnviinet.com/viinet-app-web-v2/static/linkafeiquan-202006101045.jpg" alt=""/>  */ }
         </div>
 
-        <div id="ttt">
+        {/* <div id="eee">
+          <legend>—— 这里是顶部 ——</legend>
+          <button onClick={ this.convert }>下载图片</button>
+          <br />
+        </div> */}
+
+        <div>
+
           {/* 以下解决的问题是：dom转化为canvas ，再转为图片，并下载或保存，主要方法在 utils/convertToImage 文件*/ }
-          <fieldset>
-            <legend>—— 下载图片 ——</legend>
-            <button onClick={ this.convert }>下载图片</button>
-            <br />
-            <img src={ this.state.imageEl } alt="" />
+          <fieldset  >
+            <div >
+              <legend>—— 下载图片 ——</legend>
+              <button onClick={ this.convert }>下载图片</button>
+              <br />
+              {/* <img src={ this.state.imageEl } alt="" /> */ }
+            </div>
+
           </fieldset>
 
 
@@ -221,8 +234,13 @@ class Home extends Component {
             <DomToPdf />
           </fieldset>
 
-        </div>
+          {/* 下载excel */ }
+          <fieldset>
+            <legend>——下载excel  ——</legend>
+            <ExportExcel />
+          </fieldset>
 
+        </div>
       </div >
     )
   }

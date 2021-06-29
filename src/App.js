@@ -6,9 +6,9 @@ import Interview from './components/hook/Interview'
 import HtmlTag from './components/common/HtmlTag'
 import ES from './components/common/Es'
 import Line from './pages/threejs/Line'
-import InterLine from './pages/threejs/interLine'
 import Curve from './pages/threejs/Curve'
 import Home from './pages/JAVASCRIPT/home'
+import InterLine from './pages/threejs/interLine'
 import ReactHook from './pages/JAVASCRIPT/reactHook'
 import Javascript from './pages/JAVASCRIPT/jsTest1.js'
 import CloneDeep from './pages/JAVASCRIPT/cloneDeep.js'
@@ -22,9 +22,11 @@ import Scrollreveal from './pages/HTML/scrollreveal'
 import WorldArea from './pages/HTML/worldArea'
 import Css from './pages/CSS/index'
 import Testcss from './pages/CSS/test'
+
 // import dynamic from 'next/dynamic'
 import './App.css';
 import 'antd/dist/antd.css';
+
 
 // // 使用 Mock
 // var Mock = require('mockjs')
@@ -60,6 +62,7 @@ export const HtmlTagComponent = lazy(() => import('./pages/JAVASCRIPT/home'))
 // )
 
 class App extends Component {
+
   onSwitchChange(checked) {
     const isLight = checked
     if (isLight) {
@@ -69,10 +72,10 @@ class App extends Component {
     }
   }
 
+
   render() {
     // document.body.style.setProperty('--themeColor', '#ff0000'); // css 变量方法
     return (
-
       <div className="App">
         {/* fallback属性也可以是组件，但是目前只支持组件加载的loading，不支持发送请求的loading */ }
         {/* <Suspense fallback="正在加载中..."> 
@@ -113,7 +116,6 @@ class App extends Component {
 
         {/* <Pdf/> */ }
       </div>
-
     );
   }
 }

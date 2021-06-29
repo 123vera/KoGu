@@ -15,10 +15,6 @@
       name="google-signin-client_id"
       content="887697608434-l28n1863kbm5coijumg5rg7qm0maag70.apps.googleusercontent.com"
     />
-    <meta
-      property="og:image"
-      content="https://github.githubassets.com/images/modules/open_graph/github-logo.png"
-    />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="1200" />
@@ -55,7 +51,7 @@
       crossorigin="anonymous"
     />
 
-    <title>HTML App</title>
+    <title>KoGu</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -93,6 +89,21 @@
           'color:red;font-weight:bold;'
         )
       }
+    </script>
+    <script>
+      // 页面打开计算性能 利用performance.timing进行性能分析
+      setTimeout(() => {
+        window.onload = function(){
+        let t = window.performance.timing
+        console.log('DNS查询耗时 ：' + (t.domainLookupEnd - t.domainLookupStart).toFixed(0))
+        console.log('TCP链接耗时 ：' + (t.connectEnd - t.connectStart).toFixed(0))
+        console.log('request请求耗时 ：' + (t.responseEnd - t.responseStart).toFixed(0))
+        console.log('解析dom树耗时 ：' + (t.domComplete - t.domInteractive).toFixed(0))
+        console.log('白屏时间 ：' + (t.responseStart - t.navigationStart).toFixed(0))
+        console.log('domready时间 ：' + (t.domContentLoadedEventEnd - t.navigationStart).toFixed(0))
+        console.log('onload时间 ：' + (t.loadEventEnd - t.navigationStart).toFixed(0))
+       }
+      })
     </script>
   </body>
 </html>

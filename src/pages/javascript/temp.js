@@ -212,7 +212,7 @@ function returnBonusType(treeList) { // checkedKeys
     console.log(targetArr, targetArr.entries())
     return Object.fromEntries(targetArr.entries())
 }
-console.log(returnBonusType(areas))
+// console.log(returnBonusType(areas))
 
 
 // {
@@ -222,3 +222,48 @@ console.log(returnBonusType(areas))
 //     '22': [ 221 ],
 //     '31': [ 311, 312, 313, 314 ]
 //   }
+
+
+const obj1 = {
+    name: '名字',
+    status: '状态'
+}
+const obj2 = {
+    name: '张张',
+    status: '不错'
+}
+
+function transformObj(obj1, obj2) {
+    let resultObj = {}
+
+    Object.keys(obj1).map((i) => {
+        resultObj[obj1[i]] = obj2[i]
+        return resultObj
+    })
+}
+// { '名字': '张张', '状态': '不错' }
+
+transformObj(obj1, obj2)
+
+
+let s = 'aba'  // 'aba' - true；"abcaf" - false; 'bebeb' - true; "cbbcc" - true
+
+// 最多删除一个字符，是否回文 （ ）
+function resultString(str) {
+    let i = 0, j = str.length - 1
+    let reStr = str.split('').reverse().join('')
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== str[j]) {
+            while (i < j) {
+                if (str[i++] != str[j--]) return false;
+            }
+            return true
+        }
+    }
+
+    return false
+
+}
+
+console.log(resultString(s))
