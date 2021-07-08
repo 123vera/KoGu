@@ -129,8 +129,6 @@ function DomToPdf() {
       <ul>
         <li>第一步：定义容器id和内容</li>
         <li>第二步：安装jsPDF —— new jsPDF()</li>
-        <li>第三步：</li>
-        <li>第四步：</li>
       </ul>
       {/* <button onClick={ () => downloadPdf('888888', '文件2') }>下载</button> */ }
     </div >

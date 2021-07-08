@@ -1,4 +1,3 @@
-
 const areas = [
     {
         id: 1,
@@ -248,22 +247,71 @@ transformObj(obj1, obj2)
 
 let s = 'aba'  // 'aba' - true；"abcaf" - false; 'bebeb' - true; "cbbcc" - true
 
+
+function isPalindrome(str, i, j) {
+    let length = j - i + 1
+    for (let k = 0; k < length; k++) {
+        if (str.charAt(i) !== str.charAt(j)) {
+            return false
+        }
+    }
+    return true
+}
+
+console.log(isPalindrome('abbda', 0, 4))
+
 // 最多删除一个字符，是否回文 （ ）
 function resultString(str) {
     let i = 0, j = str.length - 1
-    let reStr = str.split('').reverse().join('')
+    // let reStr = str.split('').reverse().join('')
 
     for (let i = 0; i < str.length; i++) {
         if (str[i] !== str[j]) {
             while (i < j) {
-                if (str[i++] != str[j--]) return false;
+                return isPalindrome(str, i, j - 1) || isPalindrome(str, i + 1, j)
             }
-            return true
         }
     }
-
     return false
-
 }
 
-console.log(resultString(s))
+// console.log(resultString(s))
+
+// 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
+var lengthOfLongestSubstring = function (s) {
+    //  方法一
+    // let preStr = '', curStr = ''
+    // for (let i = 0; i < s.length; i++) {
+    //     let index = curStr.indexOf(s[i])
+
+    //     if (index > -1) {
+    //         curStr = curStr.slice(index + 1)
+    //     }
+
+    //     curStr += s[i]
+    //     preStr = preStr.length > curStr.length ? preStr : curStr
+    // }
+    // return preStr.length
+
+
+
+    //  方法二
+    const dic = new Map()  // 字符字典
+    let minIndex = 0       // 左指针
+    let curIndex           // 即当前字符上次出现的索引 , 当前字符在 map 中存放的索引
+    let maxLength = 0      // 历史最大长度
+
+    for (let i = 0; i < s.length; i++) { // i 充当右指针
+        curIndex = dic.get(s[i])
+        // 如果某字符的index 比上一次出现的index大，那么左指针从currIndex+1 处开始
+        if (curIndex >= minIndex) {
+            minIndex = curIndex + 1  // 将左指针移动到上此出现的索引的下一位，缩小当前窗口
+        }
+
+        dic.set(s[i], i)  // 将当前字符存放到 map 中，并记录最新索引
+        maxLength = Math.max(i + 1 - minIndex, maxLength)   // 将当前统计的不重复字符串的长度与历史不重复字符串的长度对比，存储最大值
+    }
+    return maxLength
+};
+
+// console.log(lengthOfLongestSubstring('abcbabcb'))  // 3  无重复字符的最长子串是 "abc"，所以其长度为 3

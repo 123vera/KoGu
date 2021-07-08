@@ -61,6 +61,7 @@
     "postcss-normalize": "8.0.1",
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "4.0.1",
+    "progress": "^2.0.3",
     "puppeteer": "^4.0.0",
     "react": "^16.8.0",
     "react-app-polyfill": "^1.0.5",
