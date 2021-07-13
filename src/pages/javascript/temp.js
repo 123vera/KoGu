@@ -258,7 +258,7 @@ function isPalindrome(str, i, j) {
     return true
 }
 
-console.log(isPalindrome('abbda', 0, 4))
+// console.log(isPalindrome('abbda', 0, 4))
 
 // 最多删除一个字符，是否回文 （ ）
 function resultString(str) {
@@ -315,3 +315,84 @@ var lengthOfLongestSubstring = function (s) {
 };
 
 // console.log(lengthOfLongestSubstring('abcbabcb'))  // 3  无重复字符的最长子串是 "abc"，所以其长度为 3
+
+
+var maxSlidingWindow = function (nums, k) {
+    let arr = []
+
+    if (nums.length <= k) return arr = [Math.max(...nums)];
+
+    for (let i = 0; i < nums.length; i++) {
+        let start = i
+        let end = i + k - 1
+
+        let valueArrs = end >= 0 ? nums.slice(start, end + 1) : []
+        if (valueArrs.length === k) {
+            arr.push(Math.max(...valueArrs))
+        }
+    }
+
+
+    // for (let i = 0; i < nums.length; i++) {
+    //     for (let j = k - 1; j < nums.length; j++) {
+    //         if (j - i === (k - 1)) {
+    //             let valueArrs = nums.filter((_, key) => key >= i && key <= j)
+    //             arr.push(Math.max(...valueArrs))
+    //         }
+    //     } 
+    // }
+
+    console.log(arr)
+    return arr
+};
+
+maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3)
+maxSlidingWindow([1], 1)
+maxSlidingWindow([1, -1], 1)
+
+
+
+// function titleToNumber(string) {
+//     // let a = string?.a
+//     // console.log(a)
+// }
+
+
+// 10进制转26进制   199 （十进制） =>  9*10^0 + 9*10^1 + 1*10^2
+var titleToNumber = function (columnTitle) {
+    // A -> 1    1* 26°
+    // B -> 2    2 * 26°
+    // Z -> 26   26 * 26°
+
+    // AA -> 27  26X1 + 1 
+    // AB -> 28  26X1 + 2 
+    // AZ -> 52  26X1 + 26 
+
+    // BA -> 53 1+ 26X2
+    // BB -> 54 2+ 26X2 
+    // BZ -> 78 26+ 26X2   ===  2*26 + 26* 26°
+
+    // CA -> 79  1+ 26X3
+    // CB -> 80   2+ 26X3      === 3*26*1 + 26*26°
+    // CZ -> 104   26+ 26X3    === 3*26*1 + 26*26°
+
+
+    // ABC -> 731  1+ 26² + 2+ 26X2 + 3+ 26
+    // ABZ -> 754  1 * 26² + 2 * 26¹ + 26 * 26°
+
+    let upperCaseTitle = columnTitle.toLocaleUpperCase().split('')
+    let number = 0
+
+    for (let i = upperCaseTitle.length - 1; i >= 0; i--) {
+        number += (upperCaseTitle[i].charCodeAt() - 'A'.charCodeAt() + 1) * Math.pow(26, upperCaseTitle.length - i - 1)
+    }
+
+    return number
+};
+
+titleToNumber('A')
+titleToNumber('AB')
+titleToNumber('ABC')
+
+
+

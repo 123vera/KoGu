@@ -175,4 +175,16 @@ function Father(name) {
     this.name = name
 }
 
-let children = new Father('Tom')
+function Son(name, color) {
+    Father.call(this, name)
+    this.color = color
+}
+
+function inheritPrototy(Son, Father) {
+    let myProto = Object.create(Father.prototype)
+    Son.prototype = myProto
+    Son.prototype.constructor = Son
+    console.log(Son)
+}
+
+inheritPrototype(Son, Father)

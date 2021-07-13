@@ -101,7 +101,6 @@ class EventEmit{
 //父类
 function Father(name){
     this.name = name;
-    this.colors = ['red','blue','green'];
 }
 
 function Son (name,color){
