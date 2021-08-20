@@ -3,6 +3,7 @@
 // 单例使用场景： 比如线程池、全局缓存等。浏览器的window对象就是一个单例。在JavaScript开发中，对于这种只需要一个的对象，我们的实现往往使用单例。
 // 参考文章： https://segmentfault.com/a/1190000012842251
 
+
 // 定义一个类
 function Singleton(name) {
     this.name = name
@@ -170,7 +171,6 @@ Pub.publish('dance', '华尔兹舞');
 
 
 // *** 实现继承
-
 function Father(name) {
     this.name = name
 }
@@ -187,4 +187,79 @@ function inheritPrototy(Son, Father) {
     console.log(Son)
 }
 
-inheritPrototype(Son, Father)
+// inheritPrototype(Son, Father)
+
+
+
+
+
+let m = 2
+let dp = [];
+
+for (let j = 1; j < m; j++) {
+    let sum = [];
+    for (let i = 1; i < j; i++) {
+        // sum.push(i * (j - i))
+        for (let k = 0; k < dp[j - i].length; k++) {
+            sum.push(i * dp[j - i][k])
+        }
+    }
+    dp[j] = sum;
+
+}
+
+// console.log(dp)
+
+
+
+
+function xh(num) {
+    let a = 1
+    let arr = []
+
+    for (let i = 1; i < num; i++) {
+        // a = (num - i) + 'x' + i
+        // let splArr = a.split('x')
+        a = (num - i) * i
+        // let splArr = [num - i, i]
+        let array = []
+
+        // console.log(a, splArr[splArr.length - 1] > 1)
+        if (i > 4) {
+            array = (num - i) * xh(i)
+            // array = splArr[0] + 'x' + xh(splArr[splArr.length - 1])
+            // console.log('array', a, a.split('x')[0], array)
+            arr.push(array)
+        }
+
+        arr.push(a)
+    }
+
+
+    console.log(arr, Math.max(...arr))
+    // return a
+    return Math.max(...arr)
+}
+
+
+
+xh(7)
+
+
+function integerBreak1(n) {
+    if (n <= 4) return n
+    return 3 * integerBreak1(n - 3)
+}
+
+function integerBreak(n) {
+    if (n === 3) {
+        return 2
+    }
+    if (n === 2) {
+        return 1
+    }
+
+    return integerBreak1(n)
+}
+
+// console.log('integerBreak: ', integerBreak(8))

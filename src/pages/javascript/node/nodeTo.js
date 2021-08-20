@@ -4,6 +4,7 @@ const hostname = '127.0.0.1'
 const minimist = require('minimist')
 const app = express()
 
+
 app.get('/', (req, res) => {
     res.send('212')
 })
@@ -32,14 +33,13 @@ const testFn = () => {
 
 testFn()
 
-const ProgressBar = require('progress')
+const ProgressBar = require('progress')// 进度条
 const bar = new ProgressBar(':bar', { total: 10 })
 const timer = setInterval(() => {
     bar.tick({
         'token1': "Hello",
         'token2': "World!\n"
     })
-    console.log(bar.complete)
     if (bar.complete) {
         clearInterval(timer)
     }
@@ -51,11 +51,11 @@ const timer = setInterval(() => {
 // console.log(process.argv.slice(2)) // 'node src/node.js  wang'  => 'wang'
 // console.log(minimist(process.argv.slice(2))) // 'node src/node.js  --name=wang'  => { _: [], name: 'wang' }
 
-app.set('port', process.env.PORT || 3000)
+// app.set('port', process.env.PORT || 3000)
 
-// app.get('/', (request, response) => {
-//     response.send('Home page')
-// })
+app.get('/', (request, response) => {
+    response.send('Home page')
+})
 
 app.get('/about', (request, response) => {
     response.send('About page')
@@ -68,8 +68,22 @@ app.use((request, response) => {
     response.send('Error page')
 });
 
-app.listen(3000, () => {
-    console.log('Express server started 3000')
-})
+// app.listen(3000, () => {
+//     console.log('Express server started 3000')
+// })
 
-process.exit()
+
+// 使用export
+let car = {
+    brand: 'Ford',
+    model: 'Fiesta'
+}
+console.log('111', module.exports, exports)
+
+exports.car = car
+
+console.log('222', module.exports, exports)
+
+
+
+// process.exit()

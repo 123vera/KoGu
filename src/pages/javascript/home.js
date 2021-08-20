@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useState } from 'react';
 import Count from '../../components/hook/ExampleCount'
 import ExportExcel from '../../components/common/Excel'
+import RcCalendar from '../../components/common/RcCalendar'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import axios from "axios";
 import { downloadPdf } from './../../aseets/utils/pdf'
@@ -238,7 +239,16 @@ class Home extends Component {
             <ExportExcel />
           </fieldset>
 
+
+          {/* 日历组件 */ }
+          <fieldset>
+            <legend>——日历组件  ——</legend>
+            < RcCalendar />
+          </fieldset>
         </div>
+
+
+
       </div >
     )
   }

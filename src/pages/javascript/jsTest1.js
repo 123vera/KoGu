@@ -215,17 +215,17 @@ function Index() {
 
         <li>
           说一下用hooks实现一个小型react-redux思路
-          <code>
-            { `<Provider value={ store }></Provider>` }
+          <per>
+            {/* { `<Provider value={ store }></Provider>` } */ }
             connect(mapStatetoProps,mapDispatchToProps)()
             useReucer()
 
             1.useContext()  context =React.createContext()
-            2. context.Provider value={ store, dispatch }
+            {/* 2. context.Provider value={ store, dispatch } */ }
 
-            3. const [storem, dispatch] = useReducer(reducer)
-            4.[dispatch] useContext(context)
-          </code>
+            {/* 3. const [storem, dispatch] = useReducer(reducer) */ }
+            {/* 4.[dispatch] useContext(context) */ }
+          </per>
         </li>
 
         <li>
