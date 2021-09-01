@@ -95,11 +95,11 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
-    "testWHM": "echo \"Error:no test specfied\" && exit 1",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "test-scsslint": "./node_modules/.bin/sass-lint 'client/styles/**/*.scss' -v -q"
+    "test-scsslint": "./node_modules/.bin/sass-lint 'client/styles/**/*.scss' -v -q",
+    "postinstall": "patch-package"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -170,5 +170,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "postinstall-postinstall": "^2.1.0"
   }
 }

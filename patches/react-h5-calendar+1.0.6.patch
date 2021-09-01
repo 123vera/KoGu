@@ -1,31 +1,31 @@
-diff --git a/node_modules/react-h5-calendar/.DS_Store b/node_modules/react-h5-calendar/.DS_Store
-new file mode 100644
-index 0000000..166bdb1
-Binary files /dev/null and b/node_modules/react-h5-calendar/.DS_Store differ
 diff --git a/node_modules/react-h5-calendar/es/calendar.css b/node_modules/react-h5-calendar/es/calendar.css
-index e8b2486..667eb19 100644
+index e8b2486..00a5ee9 100644
 --- a/node_modules/react-h5-calendar/es/calendar.css
 +++ b/node_modules/react-h5-calendar/es/calendar.css
-@@ -26,6 +26,7 @@
+@@ -23,10 +23,20 @@
+   width: 50px;
+   height: 30px;
+ }
++
  .react-h5-calendar .calendar-operate .icon img {
    width: auto;
    height: 16px;
+-}
 +  filter: brightness(0.5);
- }
++}
++
++.react-h5-calendar .calendar-operate .icon img.disabled {
++  opacity: 0.2;
++ }
++.react-h5-calendar .calendar-operate .icon img.show {
++  opacity: 1;
++ }
++
  .react-h5-calendar .calendar-operate .icon.left-icon {
    transform: rotate(180deg);
-@@ -79,7 +80,8 @@
  }
- .react-h5-calendar .calendar-body .month-cell .day-cell .current-day {
-   color: #fff;
--  background: #4378be;
-+  background: red;
-+  /* background: #4378be; */
-   border-radius: 50%;
- }
- .react-h5-calendar .calendar-body .month-cell .day-cell .circle-mark {
 diff --git a/node_modules/react-h5-calendar/es/calendar.js b/node_modules/react-h5-calendar/es/calendar.js
-index c949cdf..5aab5ec 100644
+index c949cdf..071a02b 100644
 --- a/node_modules/react-h5-calendar/es/calendar.js
 +++ b/node_modules/react-h5-calendar/es/calendar.js
 @@ -22,7 +22,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
@@ -37,29 +37,7 @@ index c949cdf..5aab5ec 100644
  
  function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
  
-@@ -37,7 +37,6 @@ var head = ['日', '一', '二', '三', '四', '五', '六'];
- 
- var MonthView = /*#__PURE__*/function (_PureComponent) {
-   _inherits(MonthView, _PureComponent);
--
-   var _super = _createSuper(MonthView);
- 
-   function MonthView(props) {
-@@ -75,6 +74,13 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
-     }, 25);
- 
-     _this.handleTouchStart = function (e) {
-+      _this.setState({
-+        touch: {
-+          x: 0,
-+          y: 0
-+        }
-+      });
-+      return
-       e.stopPropagation();
-       _this.touchStartPositionX = e.touches[0].clientX;
-       _this.touchStartPositionY = e.touches[0].clientY;
-@@ -89,10 +95,10 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
+@@ -89,10 +89,10 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
        var disableWeekView = _this.props.disableWeekView;
        var calendarHeight = _this.calendarRef.current.offsetHeight;
        var _this$state = _this.state,
@@ -74,7 +52,7 @@ index c949cdf..5aab5ec 100644
        _this.f = false;
        _this.isTouching = false;
        var absTouchX = Math.abs(touch.x);
-@@ -159,15 +165,17 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
+@@ -159,20 +159,33 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
  
      _this.handleMonthToggle = function (type) {
        var _this$state2 = _this.state,
@@ -90,12 +68,32 @@ index c949cdf..5aab5ec 100644
        var operateDate = isMonthView ? currentMonthFirstDay : currenWeekFirstDay;
        var updateStateData = formatFun(operateDate[isPrev ? 'subtract' : 'add'](1, isMonthView ? 'month' : 'week'));
  
-+      // console.log('type', type)
-+
-       _this.setState(updateStateData, function () {
-         var dataArray = updateStateData[isMonthView ? 'monthDates' : 'weekDates'][1];
+-      _this.setState(updateStateData, function () {
+-        var dataArray = updateStateData[isMonthView ? 'monthDates' : 'weekDates'][1];
++      var minDate = _this.props.minDate;
++      var maxDate = _this.props.maxDate;
  
-@@ -203,27 +211,29 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
+-        _this.props.onTouchEnd(dataArray[0].valueOf(), dataArray[dataArray.length - 1].add(1, 'day').valueOf());
+-      });
++      var currentMonthFirstDay = updateStateData.currentMonthFirstDay
++      var before = currentMonthFirstDay.isBefore(minDate)
++      var after = currentMonthFirstDay.isAfter(maxDate)
++
++      if (dayjs(maxDate).isBefore(currentMonthFirstDay)) {
++        return
++      }
++
++      if (!before && !after) {
++        _this.setState(updateStateData, function () {
++          var dataArray = updateStateData[isMonthView ? 'monthDates' : 'weekDates'][1];
++
++          _this.props.onTouchEnd(dataArray[0].valueOf(), dataArray[dataArray.length - 1].add(1, 'day').valueOf());
++        });
++      }
+     };
+ 
+     _this.handleDayClick = function (date) {
+@@ -203,27 +216,37 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
  
    _createClass(MonthView, [{
      key: "handleBottomOperate",
@@ -105,8 +103,7 @@ index c949cdf..5aab5ec 100644
      key: "render",
      value: function render() {
        var _this2 = this;
- 
-+
+-
        var _this$state3 = this.state,
 -          monthDates = _this$state3.monthDates,
 -          weekDates = _this$state3.weekDates,
@@ -134,27 +131,55 @@ index c949cdf..5aab5ec 100644
 +        transitionDuration = _this$props.transitionDuration,
 +        markDates = _this$props.markDates,
 +        markType = _this$props.markType,
-+        disableWeekView = _this$props.disableWeekView;
++        disableWeekView = _this$props.disableWeekView,
++
++        maxDate = _this$props.maxDate,
++        minDate = _this$props.minDate;
++
++      var currentMonthLastDay = dayjs(currentMonthFirstDay).endOf('month') // 本月的最后一天
++
++      // 箭头的 透明度变化（是否可’点击‘）
++      var leftDisabled = currentMonthFirstDay.isBefore(dayjs(minDate)) || currentMonthFirstDay.isSame(dayjs(minDate))
++      var rightDisabled = currentMonthLastDay.isAfter(dayjs(maxDate)) || currentMonthLastDay.isSame(dayjs(maxDate))
++
 +
        var isMonthView = showType === 'month';
        return /*#__PURE__*/React.createElement("div", {
          className: "react-h5-calendar"
-@@ -270,18 +280,24 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
-           var isMarkDate = markDates.find(function (i) {
-             return date.isSame(i.date, 'day');
-           });
-+          let marketColor = isMarkDate ? isMarkDate.color : '#4378be'
-+          // console.log('marketColor', marketColor)
+@@ -233,12 +256,18 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
+         className: "icon left-icon",
+         onClick: this.handleMonthToggle.bind(this, 'prev')
+       }, /*#__PURE__*/React.createElement("img", {
 +
++        className: leftDisabled ? 'disabled' : 'show',
+         src: arrow
++
+       })), /*#__PURE__*/React.createElement("div", null, (isMonthView ? currentMonthFirstDay : currenWeekFirstDay).format('YYYY-MM')), /*#__PURE__*/React.createElement("div", {
+         className: "icon right-icon",
+         onClick: this.handleMonthToggle.bind(this, 'next')
+       }, /*#__PURE__*/React.createElement("img", {
++
++        className: rightDisabled ? 'disabled' : 'show',
+         src: arrow
++
+       }))), /*#__PURE__*/React.createElement("div", {
+         className: "calendar-head"
+       }, head.map(function (i) {
+@@ -273,21 +302,28 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
            var resetMarkType = isMarkDate && isMarkDate.markType || markType;
            var showDotMark = isCurrentDay ? false : isMarkDate && resetMarkType === 'dot';
            var showCircleMark = isCurrentDay ? false : isMarkDate && resetMarkType === 'circle';
+-          return /*#__PURE__*/React.createElement("div", {
++          var marketColor = isMarkDate ? isMarkDate.color : '#4378be'
 +
-           return /*#__PURE__*/React.createElement("div", {
++          return /*#__PURE__*/React.createElement(
++            "div", {
              key: itemIndex,
              className: "day-cell ".concat(isOtherMonthDay ? 'is-other-month-day' : ''),
              onClick: _this2.handleDayClick.bind(_this2, date)
-           }, /*#__PURE__*/React.createElement("div", {
+-          }, /*#__PURE__*/React.createElement("div", {
++          }, /*#__PURE__*/React.createElement(
++            "div", {
              className: "day-text ".concat(isCurrentDay ? 'current-day' : '', " ").concat(showCircleMark ? 'circle-mark' : ''),
 -            style: showCircleMark ? {
 -              borderColor: isMarkDate.color || '#4378be'
@@ -167,7 +192,42 @@ index c949cdf..5aab5ec 100644
            }, date.format('DD')), showDotMark && /*#__PURE__*/React.createElement("div", {
              className: isMarkDate ? 'dot-mark' : '',
              style: {
-@@ -332,11 +348,11 @@ MonthView.defaultProps = {
+               background: isMarkDate.color || '#4378be'
+             }
+           }));
++
+         }));
+       }))), disableWeekView ? null : /*#__PURE__*/React.createElement("div", {
+         className: "bottom-operate"
+@@ -300,10 +336,10 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
+     key: "getDerivedStateFromProps",
+     value: function getDerivedStateFromProps(nextProps, prevState) {
+       var currentDate = nextProps.currentDate;
+-
++      var maxDate = nextProps.maxDate
+       if (currentDate !== prevState.currentDate) {
+         var dayjsDate = dayjs(currentDate);
+-        return _objectSpread(_objectSpread(_objectSpread({}, formatMonthData(dayjsDate)), formatWeekData(dayjsDate)), {}, {
++        return _objectSpread(_objectSpread(_objectSpread({}, formatMonthData(dayjsDate, maxDate)), formatWeekData(dayjsDate)), {}, {
+           currentDate: currentDate
+         });
+       }
+@@ -316,6 +352,8 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
+ }(PureComponent);
+ 
+ MonthView.propTypes = {
++  minDate: PropTypes.string,
++  maxDate: PropTypes.string,
+   currentDate: PropTypes.string,
+   showType: PropTypes.oneOf(['week', 'month']),
+   transitionDuration: PropTypes.number,
+@@ -329,14 +367,17 @@ MonthView.propTypes = {
+   disableWeekView: PropTypes.bool
+ };
+ MonthView.defaultProps = {
++  minDate: dayjs('2000-1-1').format('YYYY-M-D'),
++  maxDate: dayjs('2050-1-1').format('YYYY-M-D'),
++  // maxDate: '',
    currentDate: dayjs().format('YYYY-MM-DD'),
    showType: 'month',
    transitionDuration: 0.3,
@@ -184,138 +244,77 @@ index c949cdf..5aab5ec 100644
    markType: 'dot',
    markDates: [],
    disableWeekView: false
-diff --git a/node_modules/react-h5-calendar/lib/calendar.js b/node_modules/react-h5-calendar/lib/calendar.js
-index e0046b2..f258d86 100644
---- a/node_modules/react-h5-calendar/lib/calendar.js
-+++ b/node_modules/react-h5-calendar/lib/calendar.js
-@@ -49,7 +49,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
- 
- function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
- 
--function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () { })); return true; } catch (e) { return false; } }
- 
- function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
- 
-@@ -73,7 +73,6 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
-       var moveY = e.touches[0].clientY - _this.touchStartPositionY;
-       var calendarWidth = _this.calendarRef.current.offsetWidth;
-       var calendarHeight = _this.calendarRef.current.offsetHeight;
--
-       if (Math.abs(moveX) > Math.abs(moveY)) {
-         // 左右滑动
-         _this.setState({
-@@ -109,10 +108,10 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
-       var disableWeekView = _this.props.disableWeekView;
-       var calendarHeight = _this.calendarRef.current.offsetHeight;
-       var _this$state = _this.state,
--          touch = _this$state.touch,
--          translateIndex = _this$state.translateIndex,
--          currentMonthFirstDay = _this$state.currentMonthFirstDay,
--          currenWeekFirstDay = _this$state.currenWeekFirstDay;
-+        touch = _this$state.touch,
-+        translateIndex = _this$state.translateIndex,
-+        currentMonthFirstDay = _this$state.currentMonthFirstDay,
-+        currenWeekFirstDay = _this$state.currenWeekFirstDay;
-       _this.f = false;
-       _this.isTouching = false;
-       var absTouchX = Math.abs(touch.x);
-@@ -147,7 +146,6 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
-             showType: 'month'
-           }, function () {
-             var dataArray = _this.state.monthDates[1];
--
-             _this.props.onToggleShowType({
-               showType: _this.state.showType,
-               startTime: dataArray[0].valueOf(),
-@@ -179,18 +177,16 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
- 
-     _this.handleMonthToggle = function (type) {
-       var _this$state2 = _this.state,
--          currentMonthFirstDay = _this$state2.currentMonthFirstDay,
--          currenWeekFirstDay = _this$state2.currenWeekFirstDay,
--          showType = _this$state2.showType;
-+        currentMonthFirstDay = _this$state2.currentMonthFirstDay,
-+        currenWeekFirstDay = _this$state2.currenWeekFirstDay,
-+        showType = _this$state2.showType;
-       var isMonthView = showType === 'month';
-       var isPrev = type === 'prev';
-       var formatFun = isMonthView ? _util.formatMonthData : _util.formatWeekData;
-       var operateDate = isMonthView ? currentMonthFirstDay : currenWeekFirstDay;
-       var updateStateData = formatFun(operateDate[isPrev ? 'subtract' : 'add'](1, isMonthView ? 'month' : 'week'));
--
-       _this.setState(updateStateData, function () {
-         var dataArray = updateStateData[isMonthView ? 'monthDates' : 'weekDates'][1];
--
-         _this.props.onTouchEnd(dataArray[0].valueOf(), dataArray[dataArray.length - 1].add(1, 'day').valueOf());
-       });
-     };
-@@ -218,34 +214,35 @@ var MonthView = /*#__PURE__*/function (_PureComponent) {
-     };
-     _this.isTouching = false;
-     _this.calendarRef = /*#__PURE__*/(0, _react.createRef)(null);
+diff --git a/node_modules/react-h5-calendar/es/util.js b/node_modules/react-h5-calendar/es/util.js
+index 703f747..68b64c4 100644
+--- a/node_modules/react-h5-calendar/es/util.js
++++ b/node_modules/react-h5-calendar/es/util.js
+@@ -1,3 +1,6 @@
 +
-     return _this;
-   }
- 
-   _createClass(MonthView, [{
-     key: "handleBottomOperate",
--    value: function handleBottomOperate() {}
-+    value: function handleBottomOperate() { }
-   }, {
-     key: "render",
-     value: function render() {
-       var _this2 = this;
--
-       var _this$state3 = this.state,
--          monthDates = _this$state3.monthDates,
--          weekDates = _this$state3.weekDates,
--          touch = _this$state3.touch,
--          translateIndex = _this$state3.translateIndex,
--          calendarY = _this$state3.calendarY,
--          currentMonthFirstDay = _this$state3.currentMonthFirstDay,
--          currenWeekFirstDay = _this$state3.currenWeekFirstDay,
--          showType = _this$state3.showType;
-+        monthDates = _this$state3.monthDates,
-+        weekDates = _this$state3.weekDates,
-+        touch = _this$state3.touch,
-+        translateIndex = _this$state3.translateIndex,
-+        calendarY = _this$state3.calendarY,
-+        currentMonthFirstDay = _this$state3.currentMonthFirstDay,
-+        currenWeekFirstDay = _this$state3.currenWeekFirstDay,
-+        showType = _this$state3.showType;
-       var _this$props = this.props,
--          currentDate = _this$props.currentDate,
--          transitionDuration = _this$props.transitionDuration,
--          markDates = _this$props.markDates,
--          markType = _this$props.markType,
--          disableWeekView = _this$props.disableWeekView;
-+        currentDate = _this$props.currentDate,
-+        transitionDuration = _this$props.transitionDuration,
-+        markDates = _this$props.markDates,
-+        markType = _this$props.markType,
-+        disableWeekView = _this$props.disableWeekView;
-       var isMonthView = showType === 'month';
--      return /*#__PURE__*/_react.default.createElement("div", {
++import dayjs from 'dayjs';
 +
-+      return /*#__PURE__*/ _react.default.createElement("div", {
-         className: "react-h5-calendar"
-       }, /*#__PURE__*/_react.default.createElement("div", {
-         className: "calendar-operate"
-@@ -352,11 +349,11 @@ MonthView.defaultProps = {
-   currentDate: (0, _dayjs.default)().format('YYYY-MM-DD'),
-   showType: 'month',
-   transitionDuration: 0.3,
--  onDateClick: function onDateClick() {},
--  onTouchStart: function onTouchStart() {},
--  onTouchMove: function onTouchMove() {},
--  onTouchEnd: function onTouchEnd() {},
--  onToggleShowType: function onToggleShowType() {},
-+  onDateClick: function onDateClick() { },
-+  onTouchStart: function onTouchStart() { },
-+  onTouchMove: function onTouchMove() { },
-+  onTouchEnd: function onTouchEnd() { },
-+  onToggleShowType: function onToggleShowType() { },
-   markType: 'dot',
-   markDates: [],
-   disableWeekView: false
+ var _this = this;
+ 
+ export var throttle = function throttle(fun, delay) {
+@@ -20,23 +23,48 @@ export var throttle = function throttle(fun, delay) {
+  * @param {*} dayjsDate dayjs对象
+  */
+ 
+-export var formatMonthData = function formatMonthData(dayjsDate) {
+-  var currentMonthFirstDay = dayjsDate.startOf('month'); // 然后当前日历的第一天就应该是月份第一天的当周周一
++export var formatMonthData = function formatMonthData(dayjsDate, maxDate) {
++  var currentMonthFirstDay, currentMonthStartDay
++  var prevMonthFirstDay, prevMonthStartDay
++  var nextMonthFirstDay, nextMonthStartDay
++
++  // 如果传maxDate < 当前日期， 默认显示maxDate所在月 
++  if (maxDate && dayjs(maxDate).isBefore(dayjsDate)) {
++    currentMonthFirstDay = dayjs(maxDate).startOf('month'); // 然后当前日历的第一天就应该是月份第一天的当周周一
++  } else {
++    currentMonthFirstDay = dayjsDate.startOf('month'); // 然后当前日历的第一天就应该是月份第一天的当周周一
++  }
++
++  //当月
++  currentMonthStartDay = currentMonthFirstDay.startOf('week');
++
++  // 上个月
++  prevMonthFirstDay = currentMonthFirstDay.subtract(1, 'month');
++  prevMonthStartDay = prevMonthFirstDay.startOf('week');
++
++  // 下个月
++  nextMonthFirstDay = currentMonthFirstDay.add(1, 'month');
++  nextMonthStartDay = nextMonthFirstDay.startOf('week');
+ 
+-  var currentMonthStartDay = currentMonthFirstDay.startOf('week');
+-  var prevMonthFirstDay = currentMonthFirstDay.subtract(1, 'month');
+-  var prevMonthStartDay = prevMonthFirstDay.startOf('week');
+-  var nextMonthFirstDay = currentMonthFirstDay.add(1, 'month');
+-  var nextMonthStartDay = nextMonthFirstDay.startOf('week');
+   return {
+     currentMonthFirstDay: currentMonthFirstDay,
+-    monthDates: [new Array(42).fill('').map(function (_, index) {
+-      return prevMonthStartDay.add(index, 'day');
+-    }), new Array(42).fill('').map(function (_, index) {
+-      return currentMonthStartDay.add(index, 'day');
+-    }), new Array(42).fill('').map(function (_, index) {
+-      return nextMonthStartDay.add(index, 'day');
+-    })]
++    monthDates: [
++      new Array(42).fill('').map(
++        function (_, index) {
++          return prevMonthStartDay.add(index, 'day');
++        }
++      ),
++      new Array(42).fill('').map(
++        function (_, index) {
++          return currentMonthStartDay.add(index, 'day');
++        }
++      ),
++      new Array(42).fill('').map(
++        function (_, index) {
++          return nextMonthStartDay.add(index, 'day');
++        }
++      )
++    ]
+   };
+ };
+ /**
