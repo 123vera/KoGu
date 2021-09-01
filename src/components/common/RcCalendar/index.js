@@ -54,7 +54,7 @@ const CalendarMain = () => {
     //     }, false);
     // }, [document.querySelector('.left-icon+div')])
 
-    console.log('maxData', dayjs().subtract(1, 'month').endOf('month').format('YYYY--MM-DD'))
+    console.log('maxData', dayjs().subtract(0, 'month').endOf('month').format('YYYY--MM-DD'))
     console.log('minData', dayjs().subtract(2, 'month').startOf('month').format('YYYY--MM-DD'))
     return (
         <div id="calendar">
@@ -75,13 +75,14 @@ const CalendarMain = () => {
 
             <div>
                 <Calendar
-                    maxDate={ dayjs().subtract(1, 'month').endOf('month').format('YYYY-M-D') }
+                    maxDate={ dayjs().subtract(0, 'month').endOf('month').format('YYYY-M-D') }
                     minDate={ dayjs().subtract(2, 'month').startOf('month').format('YYYY-M-D') }
                     onDateClick={ date => {
-                        let selectMonth = date.format('M')
-                        let currMonth = Number(dayjs().format('M'))
+                        if (date.isAfter(dayjs())) return
+                        // let selectMonth = date.format('M')
+                        // let currMonth = Number(dayjs().format('M'))
 
-                        if (selectMonth > currMonth || (selectMonth < (currMonth - 1))) return
+                        // if (selectMonth > currMonth || (selectMonth < (currMonth - 1))) return
                         setCurrentDate(date.format('YYYY-MM-DD'))
                     } }
                     showType={ 'month' }
