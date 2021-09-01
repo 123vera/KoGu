@@ -21,40 +21,41 @@ const CalendarMain = () => {
     const [currentDate, setCurrentDate] = useState(dayjs().format('YYYY-MM-DD'))
 
 
-    useEffect(() => {
-        // 为对象添加事件监听器
-        const elL = document.querySelector('.left-icon')
-        const elR = document.querySelector('.right-icon')
-        let currMonth = Number(dayjs().format('M'))
+    // useEffect(() => {
+    //     // 为对象添加事件监听器
+    //     const elL = document.querySelector('.left-icon')
+    //     const elR = document.querySelector('.right-icon')
+    //     let currMonth = Number(dayjs().format('M'))
 
-        elL.addEventListener("click", function (event) {
-            let t = document.querySelector('.left-icon+div').innerHTML
-            let boundaryMonth = Number(t.split('-')[1])
-            elR.style.opacity = '1'
-
-
-            if (boundaryMonth <= (currMonth - 1)) {
-                elL.style.opacity = '0.2'
-                // elR.style.opacity = '1'
-                event.stopPropagation()
-            }
-        }, false);
-
-        elR.addEventListener("click", function (event) {
-            let t = document.querySelector('.left-icon+div').innerHTML
-            let boundaryMonth = Number(t.split('-')[1])
-            elL.style.opacity = '1'
-
-            if (boundaryMonth >= currMonth) {
-                elR.style.opacity = '0.2'
-                // elL.style.opacity = '1'
-
-                event.stopPropagation()
-            }
-        }, false);
-    }, [document.querySelector('.left-icon+div')])
+    //     elL.addEventListener("click", function (event) {
+    //         let t = document.querySelector('.left-icon+div').innerHTML
+    //         let boundaryMonth = Number(t.split('-')[1])
+    //         elR.style.opacity = '1'
 
 
+    //         if (boundaryMonth <= (currMonth - 1)) {
+    //             elL.style.opacity = '0.2'
+    //             // elR.style.opacity = '1'
+    //             event.stopPropagation()
+    //         }
+    //     }, false);
+
+    //     elR.addEventListener("click", function (event) {
+    //         let t = document.querySelector('.left-icon+div').innerHTML
+    //         let boundaryMonth = Number(t.split('-')[1])
+    //         elL.style.opacity = '1'
+
+    //         if (boundaryMonth >= currMonth) {
+    //             elR.style.opacity = '0.2'
+    //             // elL.style.opacity = '1'
+
+    //             event.stopPropagation()
+    //         }
+    //     }, false);
+    // }, [document.querySelector('.left-icon+div')])
+
+    console.log('maxData', dayjs().subtract(1, 'month').endOf('month').format('YYYY--MM-DD'))
+    console.log('minData', dayjs().subtract(2, 'month').startOf('month').format('YYYY--MM-DD'))
     return (
         <div id="calendar">
             日历组件
@@ -74,6 +75,8 @@ const CalendarMain = () => {
 
             <div>
                 <Calendar
+                    maxDate={ dayjs().subtract(1, 'month').endOf('month').format('YYYY-M-D') }
+                    minDate={ dayjs().subtract(2, 'month').startOf('month').format('YYYY-M-D') }
                     onDateClick={ date => {
                         let selectMonth = date.format('M')
                         let currMonth = Number(dayjs().format('M'))
@@ -101,6 +104,26 @@ const CalendarMain = () => {
                 <li>异常</li>
                 <li>异常(流程中)</li>
             </ul>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
         </div>
     )
 }
