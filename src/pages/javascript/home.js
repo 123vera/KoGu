@@ -1,17 +1,17 @@
 import React, { Component, useEffect, useState } from 'react';
+import axios from "axios";
+import "../../mock"
+import { Router } from 'react-router-dom'
+import test1 from '../../assets/imgs/test1.jpg';
+import { downloadPdf } from '../../assets/utils/pdf'
 import Count from '../../components/hook/ExampleCount'
 import ExportExcel from '../../components/common/Excel'
-import RcCalendar from '../../components/common/RcCalendar'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-import axios from "axios";
-import { downloadPdf } from './../../aseets/utils/pdf'
-import { Router } from 'react-router-dom'
-// import { Modal, Form, Input, Radio } from "antd";
-// import Router from 'next/router'
-import "../../mock"
+import RcCalendar from '../../components/common/RcCalendar'
+import DomToImage from '@components/common/DomToImage/index'
+import { convertToImage } from '../../assets/utils/convertToImage';
 import './home.scss'
-import { convertToImage } from '../../aseets/utils/convertToImage';
-import test1 from '../../aseets/imgs/test1.jpg';
+
 
 // 如果你在beforePopState中返回 false，Router将不会执行popstate事件。
 // Router.beforePopState(({ url, as, options }) => {
@@ -142,28 +142,6 @@ class Home extends Component {
     limitAmount: 10
   }
 
-  componentDidMount() {
-    return
-    axios
-      .get('/api/tags') //这列的'/api/tags'与mock.js文件里的地址一致
-      .then(res => {
-        //  console.log('323', JSON.stringify(res.data, null, 4))
-      })
-
-    axios
-      .get(`/ api / users / create`) //这列的'/api/users/create'与mock.js文件里的地址一致
-      .then(res => {
-        console.log('22222323', res)
-      })
-
-    // Mock.mock( rurl, template )
-    axios
-      .get(`/ api / currentUser`) //这列的'/api/currentUser'与mock.js文件里的地址一致
-      .then(res => {
-        console.log('res', res)
-      })
-  }
-
   convert = () => {
     convertToImage(document.getElementById('homeContainer'), { backgroundColor: null, size: 0.8 }).then(res => {
       // convertToImage(document.getElementById('homeContainer'), {width: 100, height: 100,backgroundColor: null}).then(res => {
@@ -180,22 +158,24 @@ class Home extends Component {
         <div id="homeContainer" >
           <button onClick={ () => downloadPdf('pdfContainer', '文件2') }>（必须位于顶部）下载pdf</button>
 
-          <h2 onClick={ () => Router.push('/viinet') }>HookHookHookHookHookHook</h2>
-          <br />
-          <a href="weixin://" >打开微信l</a>
+          <a href="weixin://" >前往打开微信l</a>
 
-          <CopyToClipboard
-            style={ { cursor: 'pointer' } }
-            text={ '这是一段复制内容' }
-            onCopy={ () => alert('複製成功') }
-          >
-            <span>{ '複製地址' }</span>
-          </CopyToClipboard>
 
-          <Count />
+          <fieldset  >
+            <legend>—— 复制粘贴功能 ——</legend>
+            <CopyToClipboard
+              style={ { cursor: 'pointer' } }
+              text={ '这是一段复制内容' }
+              onCopy={ () => alert('复制成功') }
+            >
+              <span>{ '复制地址' }</span>
+            </CopyToClipboard>
 
-          <img className="testIng" src={ test1 } alt="" />
+          </fieldset>
 
+
+
+          {/* <img className="testIng" src={ test1 } alt="" /> */ }
           {/* cdn图片不显示因为跨域问题，待研究 */ }
           {/* <img className="testIng" src="https://cdn.cnviinet.com/viinet-app-web-v2/static/linkafeiquan-202006101045.jpg" alt=""/>  */ }
         </div>
@@ -233,6 +213,13 @@ class Home extends Component {
             <DomToPdf />
           </fieldset>
 
+
+          {/* dom导出图片 */ }
+          <fieldset>
+            <legend>—— dom导出图片  ——</legend>
+            < DomToImage />
+          </fieldset>
+
           {/* 下载excel */ }
           <fieldset>
             <legend>——下载excel  ——</legend>
@@ -245,10 +232,9 @@ class Home extends Component {
             <legend>——日历组件  ——</legend>
             < RcCalendar />
           </fieldset>
+
+
         </div>
-
-
-
       </div >
     )
   }

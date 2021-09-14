@@ -1,5 +1,5 @@
 import React from 'react'
-import test3 from '../../aseets/imgs/test3.jpg';
+import test3 from '../../assets/imgs/test3.jpg';
 import './test.scss'
 
 function Index() {

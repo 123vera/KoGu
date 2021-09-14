@@ -5,13 +5,13 @@ import * as THREE from 'three';
 // import Stats from 'three/examples/jsm/libs/stats.module.js';
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import './interLine.scss'
-import Img1 from './../../aseets/imgs/test1.jpg'
-import Img2 from './../../aseets/imgs/test2.jpg'
-import Img3 from './../../aseets/imgs/test3.jpg'
-import Img4 from './../../aseets/imgs/test4.jpg'
-import Img5 from './../../aseets/imgs/test5.jpg'
-import Img6 from './../../aseets/imgs/test6.jpg'
-import Qipan from './../../aseets/imgs/qipan.png'
+import Img1 from '../../assets/imgs/test1.jpg'
+import Img2 from '../../assets/imgs/test2.jpg'
+import Img3 from '../../assets/imgs/test3.jpg'
+import Img4 from '../../assets/imgs/test4.jpg'
+import Img5 from '../../assets/imgs/test5.jpg'
+import Img6 from '../../assets/imgs/test6.jpg'
+import Qipan from '../../assets/imgs/qipan.png'
 
 
 

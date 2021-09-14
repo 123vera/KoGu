@@ -2,6 +2,13 @@
   min-height: 100vh;
   color: currentColor;
 
+  fieldset {
+    legend {
+      border-top: 1px solid #e5e5e5;
+      border-bottom: none;
+    }
+  }
+
   .testIng {
     display: block;
     width: 200px;
