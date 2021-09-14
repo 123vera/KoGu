@@ -11,8 +11,8 @@ const routes = [
 
 
     // threejs
-    { key: '/threejs/line', title: 'threejs - 模拟线', component: require('@pages/threejs/Line/').default },
-    { key: '/threejs/curve', title: 'threejs 一些尝试', component: require('@pages/threejs/Curve/').default },
+    { key: '/threejs/line', title: 'threejs - 模拟线', component: require('@pages/threejs/line/').default },
+    { key: '/threejs/curve', title: 'threejs 一些尝试', component: require('@pages/threejs/curve/').default },
     { key: '/threejs/interLine', title: 'threejs - demo', component: require('@pages/threejs/interLine/').default },
     { key: '/threejs/wormHoles', title: 'threejs - 虫洞', component: require('@pages/threejs/wormHoles/').default },
 
