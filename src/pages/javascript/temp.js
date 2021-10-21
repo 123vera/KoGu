@@ -395,4 +395,53 @@ titleToNumber('AB')
 titleToNumber('ABC')
 
 
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var longestPalindrome = function (s) {
+    let startIdx
+    let strArr = ['']
+    // let maxLeng = 0
+
+    for (let i = 0; i < s.length; i++) {
+        if (s.length === 1) return s[0]
+
+        for (let j = i + 1; j < s.length; j++) {
+            startIdx = i
+            endIdx = j
+
+            if (s[i] === s[j]) {
+                leng = j - i + 1
+                let str = s.substr(startIdx, leng)
+                // console.log(startIdx, endIdx)
+                if (strArr[0].length < leng) {
+                    if (str === str.split('').reverse().join('').toString()) {
+                        strArr.push(s.substr(startIdx, leng))
+                    } else {
+                        strArr.push(s.substr(0, 1))
+                    }
+                }
+            }
+            else {
+                if (s.length <= 2) {
+                    strArr[0] = s[i]
+                }
+            }
+        }
+    }
+    // console.log('strArr', strArr)
+
+    strArr.sort((a, b) => a.length - b.length)
+    return strArr[strArr.length - 1]
+};
+
+console.log('------分割线------')
+console.log(longestPalindrome('ccc'))
+console.log(longestPalindrome('babad'))
+console.log(longestPalindrome('cbbd'))
+console.log(longestPalindrome('ac'))
+console.log(longestPalindrome("abcba"))
+console.log(longestPalindrome("abcda"))
+// console.log(longestPalindrome("aacabdkacaa"))
 
