@@ -31,6 +31,9 @@ const routes = [
     { key: '/html/htmlTag', title: '不常用的html标签', component: require('@components/common/HtmlTag/').default },
     { key: '/html/inputItem', title: '不常用的表单元素', component: require('@components/common/InputItem/').default },
 
+    // network
+    { key: '/network', title: '浏览器', component: require('@pages/network/index/').default },
+
 ]
 
 export default routes

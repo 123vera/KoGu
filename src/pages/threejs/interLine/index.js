@@ -5,15 +5,13 @@ import * as THREE from 'three';
 // import Stats from 'three/examples/jsm/libs/stats.module.js';
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import './index.scss'
-import Img1 from '../../assets/imgs/test1.jpg'
-import Img2 from '../../assets/imgs/test2.jpg'
-import Img3 from '../../assets/imgs/test3.jpg'
-import Img4 from '../../assets/imgs/test4.jpg'
-import Img5 from '../../assets/imgs/test5.jpg'
-import Img6 from '../../assets/imgs/test6.jpg'
-import Qipan from '../../assets/imgs/qipan.png'
-
-
+import Img1 from '../../../assets/imgs/test1.jpg'
+import Img2 from '../../../assets/imgs/test2.jpg'
+import Img3 from '../../../assets/imgs/test3.jpg'
+import Img4 from '../../../assets/imgs/test4.jpg'
+import Img5 from '../../../assets/imgs/test5.jpg'
+import Img6 from '../../../assets/imgs/test6.jpg'
+import qipan from '../../../assets/imgs/qipan.png'
 
 class InterLine extends Component {
   componentDidMount() {
@@ -268,7 +266,8 @@ class InterLine extends Component {
     let geo = new THREE.PlaneGeometry(4, 4) // 创建正方形
 
 
-    const singleLoad = loader2.load(Qipan, function (texture) {
+    const singleLoad = loader2.load(qipan, function (texture) {
+      // const singleLoad = loader2.load(Qipan, function (texture) {
       let metarials2 = new THREE.MeshBasicMaterial({
         map: texture,
       })
