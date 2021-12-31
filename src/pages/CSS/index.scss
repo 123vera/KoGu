@@ -1,23 +1,97 @@
 /* This is a CSS comment */
-#clampCss{
-    margin: auto;
-    width: max(900px, calc(90% + 300px)); /* 其含义是宽度设置为  1000px，当 calc(70% + 100px) 比  1000px 小时，宽度为 calc(70% + 100px) 。min() 允许你设置一个上限值。 */
-    font-size: clamp(12px, 5vw, 24px);
+#clampCss {
+  margin: auto;
+  width: max(
+    900px,
+    calc(90% + 300px)
+  ); /* 其含义是宽度设置为  1000px，当 calc(70% + 100px) 比  1000px 小时，宽度为 calc(70% + 100px) 。min() 允许你设置一个上限值。 */
+  font-size: clamp(12px, 5vw, 24px);
 
-    img {
-        height: clamp(100px, 800px, 400px);
-        pointer-events: none;
+  img {
+    height: clamp(100px, 800px, 400px);
+    pointer-events: none;
+  }
+
+  figcaption {
+    width: max(900px, calc(90% + 300px));
+  }
+
+  h1 {
+    letter-spacing: 2px;
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+  }
+}
+
+#lightSaber {
+  @property --xPoint {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 400px;
+  }
+  @property --yPoint {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 300px;
+  }
+
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  overflow: hidden;
+  border: 1px solid #fff;
+  animation: pointMove 2.5s infinite alternate linear;
+  background: conic-gradient(
+      from -45deg at var(--xPoint) var(--yPoint),
+      hsla(170deg, 100%, 70%, 0.7),
+      transparent 50%,
+      hsla(219deg, 90%, 80%, 0.5) 100%
+    ),
+    conic-gradient(
+      from 180deg at var(--x2Point) var(--y2Point),
+      hsla(170deg, 100%, 70%, 0.7),
+      transparent 50%,
+      hsla(219deg, 90%, 80%, 0.5) 100%
+    ),
+    linear-gradient(-45deg, #060d5e, #002268);
+
+  .line {
+    display: inline-block;
+
+    &.first {
+      width: 430px;
+      height: 300px;
+      background: #fff;
+      margin-top: -50px;
+      margin-left: -150px;
+      transform-origin: 100% 100%;
+      transform: rotate(225deg);
+      clip-path: polygon(-100% 100%, 200% 100%, 200% 500%, -100% 500%);
+      box-shadow: 0px 0 0.5px hsla(170deg, 95%, 80%, 1),
+        0px 0 1px hsla(170deg, 91%, 80%, 0.95),
+        0px 0 2px hsla(171deg, 91%, 80%, 0.95),
+        0px 0 3px hsla(171deg, 91%, 80%, 0.95),
+        0px 0 4px hsla(171deg, 91%, 82%, 0.9),
+        0px 0 5px hsla(172deg, 91%, 82%, 0.9),
+        0px 0 10px hsla(173deg, 91%, 84%, 0.9),
+        0px 0 20px hsla(174deg, 91%, 86%, 0.85),
+        0px 0 40px hsla(175deg, 91%, 86%, 0.85),
+        0px 0 60px hsla(175deg, 91%, 86%, 0.85);
+      animation: scale 2s infinite alternate linear;
+      mix-blend-mode: hard-light;
     }
+  }
 
-    figcaption{
-        width: max(900px, calc(90% + 300px));
+  @keyframes scale {
+    50%,
+    100% {
+      transform: rotate(225deg) scale(0);
     }
+  }
 
-      
-      h1 {
-        letter-spacing: 2px;
-        font-size: clamp(1.8rem, 2.5vw, 2.8rem);
-      }
-      
-     
+  @keyframes pointMove {
+    100% {
+      --xPoint: 100px;
+      --yPoint: 0;
+    }
+  }
 }

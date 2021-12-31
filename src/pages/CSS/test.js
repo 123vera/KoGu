@@ -1,4 +1,5 @@
 import React from 'react'
+import LightSaber from './lightSaber'
 import test3 from '../../assets/imgs/test3.jpg';
 import './test.scss'
 
@@ -40,6 +41,11 @@ function Index() {
                     css-mask
                     <img className="maskImage" src={ test3 } alt="mask" />
                 </li>
+
+                <li>
+                    <LightSaber />
+                </li>
+
             </ul>
         </div>
 
