@@ -1,17 +1,13 @@
 import React, { Component, useEffect, useState } from 'react';
-import axios from "axios";
 import "../../mock"
-import { Router } from 'react-router-dom'
-import test1 from '../../assets/imgs/test1.jpg';
 import { downloadPdf } from '../../assets/utils/pdf'
-import Count from '../../components/hook/ExampleCount'
 import ExportExcel from '../../components/common/Excel'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import RcCalendar from '../../components/common/RcCalendar'
 import DomToImage from '@components/common/DomToImage/index'
 import { convertToImage } from '../../assets/utils/convertToImage';
 import './home.scss'
-
+// import { Clone, SearchUrl, Cookie, ArrFormat, NumFormat, DateFormat } from 'viki-npm'
 
 // 如果你在beforePopState中返回 false，Router将不会执行popstate事件。
 // Router.beforePopState(({ url, as, options }) => {
@@ -151,7 +147,7 @@ class Home extends Component {
 
 
   render() {
-    console.log(Router.router && Router.router.pathname)  // 获取路由的方法
+    // console.log(Router.router && Router.router.pathname)  // 获取路由的方法
 
     return (
       <div className='home' id="home">

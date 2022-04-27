@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 
 function Index() {
     useEffect(() => {
         complexData()
     }, [])
 
-   
-    function complexData(){
-        let obj1 = {  name: 'wangsiran' }
+
+    function complexData() {
+        let obj1 = { name: 'wangsiran' }
         let obj2 = obj1
 
         console.log(obj1)
@@ -18,10 +18,6 @@ function Index() {
         console.log(obj1)
         console.log(obj2)
     }
-
-    return (
-    <div></div>
-    )
 }
 
 export default Index
