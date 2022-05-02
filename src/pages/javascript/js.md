@@ -128,8 +128,7 @@ function useStateHook(obj){
             setState(state);
             ref.current = cb;
         },
-        [],
-    )
+        [])
 
     useEffect(()=>{
         ref.current();
@@ -169,7 +168,7 @@ useReucer()
   //输出"b";
   //要求使用正则表达式
 
-  /\w(1)/
+  /(\w)\1+/g
 
 - 给定一个非空字符串 s，最多删除一个字符。判断是否能成为回文字符串。
 

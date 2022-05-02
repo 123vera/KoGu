@@ -1,5 +1,5 @@
 // *** 实现一个单例(_一个类只能有以一个实例)
-// 定义： 确保一个类仅有一个实例，并提供一个访问它的全局访问点。
+// 定义： 确保一个类仅有一个实例，并提供一个访问其唯一对象的方式。
 // 单例使用场景： 比如线程池、全局缓存等。浏览器的window对象就是一个单例。在JavaScript开发中，对于这种只需要一个的对象，我们的实现往往使用单例。
 // 参考文章： https://segmentfault.com/a/1190000012842251
 
@@ -28,7 +28,7 @@ let a = Singleton.getInstance('aa')  // Singleton { name: 'aa', instance: null }
 // 获取对象2
 let b = Singleton.getInstance('bb')  // Singleton { name: 'aa', instance: null }
 
-// console.log(a === b);  // true , 
+// console.log(a === b);  // true 
 
 
 
@@ -59,13 +59,17 @@ Subject.prototype = {
     // 移除观察者
     remove(observer) {
         let observers = this.observers
-        observers.map((o, key) => {
-            if (o === observer) {
-                observers.splice(key, 1) // observers = [1,2]  原数组改变
-                // delete observers[key] // observers = [1,2, empty]  原数组长度不变
-            }
-        })
+        let deleteIndex = observers.findIndex(i => i === observer)
+        observers.splice(deleteIndex, 1)  // 原数组改变
+
+        // observers.map((o, key) => {
+        //     if (o === observer) {
+        //         observers.splice(key, 1) // observers = [1,2]  原数组改变
+        //         // delete observers[key] // observers = [1,2, empty]  原数组长度不变
+        //     }
+        // })
     },
+
 
     // 通知观察者
     notify() {
