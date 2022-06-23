@@ -40,7 +40,7 @@ const bubbleSort = function (nums) {
     if (nums.length <= 0) return []
 
     // i < length - 1 
-    // 是因为外层只需要 length-1 次就排好了，第 length 次比较是多余的。
+    // 外层只需要 length-1 次就排好了，第 length 次比较是多余的。
     for (let i = 0; i < nums.length - 1; i++) {
         let hasChange = false // 算法优化， 提前退出冒泡循环的标志位
 
@@ -83,7 +83,7 @@ const mergeSort = function (left, right) {
 
     let canMerge = left.length && right.length
     let result = []
-    console.log('left', left, right)
+    // console.log('left', left, right)
 
     // if (left.length === 0) return result.push(right[0])
     // if (right.length === 0) return result.push(left[0])
@@ -100,31 +100,26 @@ const mergeSort = function (left, right) {
 
 console.log(splitFirst([4, 2, 5, 9]))
 
+/**
+ * 选择排序
+ * number[] 无序数组 
+ * number[] return 有序数组
+*/
+function selectionSort(nums) {
+    let minIdx
 
-const lsit = [
-    {
-        status: 0,
-        apllyer: 'whm'
-    },
-    {
-        status: 1,
-        apllyer: ''
-    },
-    {
-        status: 2,
-        apllyer: ''
-    },
-    {
-        status: 3,
-        apllyer: ''
+    for (let i = 0; i < nums.length; i++) {
+        minIdx = i
+        for (let j = i + 1; j < nums.length; j++) {
+            if (nums[j] < nums[minIdx]) {
+                minIdx = j
+            }
+        }
+
+        let temp = nums[minIdx]
+        nums[minIdx] = nums[i]
+        nums[i] = temp
     }
-]
+}
 
-status: 3
-
-
-
-
-lsit.push({
-
-})
+selectionSort([2, 3, 10, 4, 1])

@@ -1,78 +1,80 @@
+const { useState } = require("react")
+
 // 设计模式手写代码 、时间循环机制 例子学习
-// function Singleton(name) {
-//     this.name = name
-//     this.instance = null
-// }
-// Singleton.prototype.getName = function (name) {
-//     console.log(name)
-// }
+function Singleton(name) {
+    this.name = name
+    this.instance = null
+}
+Singleton.prototype.getName = function (name) {
+    console.log(name)
+}
 
 
-// // Singleton = {
-// //     name: name,
-// //     instance: null,
-// //     getName: function (name) {
+// Singleton = {
+//     name: name,
+//     instance: null,
+//     getName: function (name) {
 
-// //     }
-// // }
-
-// Singleton.getInstance = function (name) {
-//     if (!this.instance) {
-//         this.instance = new Singleton(name)
 //     }
-//     return this.instance
 // }
 
+Singleton.getInstance = function (name) {
+    if (!this.instance) {
+        this.instance = new Singleton(name)
+    }
+    return this.instance
+}
 
-// let a = Singleton.getInstance('aa')
-// let b = Singleton.getInstance('bb')
+
+let a = Singleton.getInstance('aa')
+let b = Singleton.getInstance('bb')
 
 // console.log(a, b)
 
 
 // // ------------------------------------
 
-// // 观察者模式 
-// /**
-//  * 观察者角色（observe）、被观察者（subject）
-// */
+// 观察者模式 
+/**
+ * 观察者角色（observe）、被观察者（subject）
+*/
 
-// let Subject = function () { this.observers = [] }
+let Subject = function () { this.observers = [] }
 
-// Subject.prototype = {
-//     // 添加观察者
-//     add: function (observer) {
-//         this.observers.push(observer)
-//     },
+Subject.prototype = {
+    // 添加观察者
+    add: function (observer) {
+        this.observers.push(observer)
+    },
 
-//     // 移除观察者
-//     remove: function (observer) {
-//         let observers = this.observers
-//         observers.forEach((o, index) => {
-//             if (o === observer) {
-//                 observers.splice(index, 1)
-//             }
-//         });
-//     },
+    // 移除观察者
+    remove: function (observer) {
+        let observers = this.observers
+        observers.forEach((o, index) => {
+            if (o === observer) {
+                observers.splice(index, 1)
+            }
+        });
+    },
 
-//     // 通知观察者
-//     notify: function (key) {
+    // 通知观察者
+    notify: function (key) {
 
-//         // 通知全部观察者
-//         for (let i = 0; i < Observers.length; i++) {
-//             Observers[i].update()
-//         }
-//     }
-// }
+        // 通知全部观察者
+        for (let i = 0; i < Observers.length; i++) {
+            Observers[i].update()
+        }
+    }
+}
 
-// let Observers = function (name) {
-//     this.name = name
-// }
-// Observers.prototype = {
-//     update: function (msg) {
-//         console.log('通知O, S变化了' + msg)
-//     }
-// }
+let Observers = function (name) {
+    this.name = name
+}
+Observers.prototype = {
+    update: function (msg) {
+        console.log('通知O, S变化了' + msg)
+    }
+}
 
 
 
@@ -359,4 +361,17 @@ function testFinally() {
         return "做作业";
     }
     return "睡觉";
+}
+
+const [name,setName] = useState()
+
+function useState(initState){
+    this.state = initState
+
+
+    function setName(state){
+        this.state = state
+    }
+
+    return [this.state, setName]
 }

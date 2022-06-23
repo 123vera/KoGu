@@ -15,7 +15,7 @@ import qipan from '../../../assets/imgs/qipan.png'
 
 class InterLine extends Component {
   componentDidMount() {
-    this.init()
+    // this.init()
   }
 
   init = () => {

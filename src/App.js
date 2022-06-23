@@ -4,13 +4,17 @@ import { BrowserRouter as Router, Switch, withRouter } from 'react-router-dom'
 import Routes from './routes'
 import './App.css';
 import 'antd/dist/antd.css';
+import { resolve } from 'dns';
 
 
 export const HomeComponent = lazy(() => import('./pages/javascript/home'))
 export const HtmlTagComponent = lazy(() => import('./pages/javascript/home'))
 
 
+
 class App extends Component {
+
+
 
   onSwitchChange(checked) {
     const isLight = checked
@@ -47,3 +51,5 @@ class App extends Component {
 }
 
 export default withRouter(App);
+
+

@@ -328,3 +328,103 @@ const treeToArr = (list) => {
 console.log(arrToTree(arrList1, 0))
 console.log('treeToArr', treeToArr(arrToTree(arrList1, 0)))
 
+
+// 最长公共前缀1
+/**
+ * @param {string[]} strs
+ * @return {string}
+ * 横向对比
+ */
+var longestCommonPrefix = function (strs) {
+    let compire = strs[0]
+    for (let i = 1; i < strs.length; i++) {
+        let str = strs[i]
+        for (let j = 0; j < compire.length; j++) {
+            if (compire[j] !== str[j]) {
+                compire = str.slice(0, j)
+                break
+            }
+        }
+    }
+    return compire
+};
+
+
+// 最长公共前缀2
+/**
+ * @param {string[]} list
+ * @return {string}
+ * 纵向对比
+ */
+var longestCommonPrefix = function (list) {
+    const first = list[0]
+
+    let str = ''
+    let index = 0
+    while (true) {
+        const char = first[index]
+        if (!char) return str
+        const pass = list.every(str => str[index] === char)
+        if (pass) {
+            str += char
+            index++
+        } else {
+            return str
+        }
+    }
+};
+// 最长公共前缀3
+/**
+ * @param {string[]} list
+ * @return {string}
+ * 纵向对比
+ */
+var longestCommonPrefix = function (list) {
+    let result = ''
+
+    for (let i = 0; i < list[0].length; i++) {
+        const letter = list[0][i]
+
+        for (let j = 0; j < list.length; j++) {
+            if (list[j][i] !== letter) {
+                return result
+            }
+        }
+        result += letter
+    }
+
+    return result
+}
+
+//      1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+// res [0:[1,2],1:[]]
+
+
+function setData(arr, len) {
+    let result = [[]]
+    let group = 0
+
+    // [1, 2, 3, 4, 5, 6, 7, 8]
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     const j = Math.floor(i / len)
+    //     result[j] = [...(result[j] || []), arr[i]]
+    // }
+
+
+    // return result
+
+
+    for (let i = 0, leng = arr.length; i < leng; i++) {
+        if (i % len === 0 && i !== 0) {
+            group++
+            result[group] = [arr[i]]
+        } else {
+            result[group] = [...(result[group] || []), arr[i]]
+        }
+    }
+}
+
+let data = Array.from({ length: 100 }, (_, key) => key + 1)
+setData(data, 20)
+

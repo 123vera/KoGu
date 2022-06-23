@@ -18,7 +18,7 @@ const routes = [
 
     // javascript
     { key: '/js/inter', title: '算法题', component: require('@components/hook/Interview/').default },
-    { key: '/js/js', title: 'javascript练习', component: require('@pages/javascript/jsTest1/').default },
+    { key: '/js/js', title: 'javascript练习', component: require('@pages/javascript/Algorithm/jsTest1/').default },
     { key: '/js/scrollreveal', title: '双向滚动页面', component: require('@pages/html/scrollreveal/').default },
     { key: '/js/worldArea', title: '世界国家城市联动', component: require('@pages/html/worldArea/').default },
     { key: '/js/cloneDeep', title: ' 深拷贝和浅拷贝', component: require('@pages/javascript/cloneDeep/').default },
